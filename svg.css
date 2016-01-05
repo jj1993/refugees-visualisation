@@ -3,6 +3,10 @@
 	stroke: #222222;
 	stroke-width:1px;
 }
+.land:hover {
+	fill: white !important;
+	stroke-width:1.5px;
+}
 .crater{
 	fill: red;
 	stroke:#222222;

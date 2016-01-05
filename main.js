@@ -1,29 +1,32 @@
-/* use this to test out your function */
+STARTYEAR = 2010;
+
 window.onload = function() {
 
 	// build queue to load in data
  	var q = queue(1);
- 	q.defer(d3.csv, "data.csv");
  	q.defer(d3.json, "data/world-50m.json");
+ 	q.defer(d3.json, "data/refugees.json");
+ 	q.defer(d3.json, "data/colorvalues.json");
  	q.awaitAll(drawMap);
 }
 // Draws a map with the crators in the dataset
 function drawMap(error, data){
-	var fireballs = data[0];
-	var mapData = data[1];
+	var mapData = data[0];
+	var refugees = data[1];
+	var colorValues = data[2];
 	
 	// build svg element to hold map
 	var width = 0.7*screen.width
 	var height = 0.6*screen.height
 	var svg = d3.select("body").append("svg")
  			.attr("width", width)
- 			.attr("height", height)
+ 			.attr("height", height);
 
 	// initialise projection of the map
 	var projection = d3.geo.mercator()
 					.scale(500)
 					.translate([width / 3, height*1.5]);
-	
+
 	// initialise path builder
 	var path = d3.geo.path()
 				.projection(projection);
@@ -32,9 +35,11 @@ function drawMap(error, data){
  	svg.selectAll(".land")
  		.data(topojson.feature(mapData, mapData.objects.countries).features)
  		.enter().append("path")
- 			.attr("class", function(d){ return "land " + d.id;})
- 			.attr("d", path)
- 	
+ 			.attr("class", function(d){return "land "+d.id})
+ 			.attr("style", function(d) {console.log(d.id); return "fill:blue"})
+ 			.attr("d", path);
+
+
  	// // build scale for crators
  	// var domain = d3.extent(fireballs, function(d){return +d.Impact})
  	// var scale_impact = d3.scale.log()
@@ -83,6 +88,8 @@ function drawMap(error, data){
 // 			.attr("x", 70)
 // 			.attr("y", function(d, i){return 44 + i * 40;});
 }
+
+
 
 // // returns the data used for the legenda
 // function getLegendaData(domain){
