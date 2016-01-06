@@ -11,7 +11,7 @@ Afghanistan;Pakistan;1.504.912;-;1.540.283
 Afghanistan;Sweden1;12.090;-;12.090
 Afghanistan;United Kingdom1;9.054;-;9.054
 Bhutan;Nepal;23.059;-;20.809
-Bosnia and Herzegovina;Serbia and Kosovo (S/RES/1244 (1999));11.325;-;9.288
+Bosnia and Herzegovina;Serbia and Kosovo;11.325;-;9.288
 Burundi;Dem. Rep. of the Congo;9.259;-;20.916
 Burundi;Rwanda;388;-;59.050
 Burundi;Uganda;11.903;-;17.305
@@ -33,11 +33,11 @@ Colombia;Panama;15.551;-;15.577
 Colombia;United States of America1;10.552;-;10.552
 Colombia;Venezuela (Bolivarian Republic of);173.519;-;174.110
 Congo;South Africa;6.035;-;6.224
-C“te d'Ivoire;Ghana;9.779;-;9.760
-C“te d'Ivoire;Guinea;6.580;-;6.567
-C“te d'Ivoire;Liberia;38.109;-;38.444
+Cote d'Ivoire;Ghana;9.779;-;9.760
+Cote d'Ivoire;Guinea;6.580;-;6.567
+Cote d'Ivoire;Liberia;38.109;-;38.444
 Croatia2;Bosnia and Herzegovina;6.703;-;6.689
-Croatia2;Serbia and Kosovo (S/RES/1244 (1999));32.408;-;25.997
+Croatia2;Serbia and Kosovo;32.408;-;25.997
 Dem. Rep. of the Congo;Angola;12.944;-;12.944
 Dem. Rep. of the Congo;Burundi;52.631;-;53.800
 Dem. Rep. of the Congo;Central African Rep.;5.342;-;5.470
@@ -119,9 +119,9 @@ Rwanda;Dem. Rep. of the Congo;38.028;-;35.835
 Rwanda;Uganda;14.312;-;14.283
 Senegal;Gambia;11.036;-;11.224
 Senegal;Guinea-Bissau;8.601;-;8.601
-Serbia and Kosovo (S/RES/1244 (1999));France;12.119;-;12.412
-Serbia and Kosovo (S/RES/1244 (1999));Germany;9.294;-;9.157
-Serbia and Kosovo (S/RES/1244 (1999));Montenegro;5.633;-;5.474
+Serbia and Kosovo;France;12.119;-;12.412
+Serbia and Kosovo;Germany;9.294;-;9.157
+Serbia and Kosovo;Montenegro;5.633;-;5.474
 Somalia;Djibouti;19.720;-;11.891
 Somalia;Ethiopia;245.097;-;247.281
 Somalia;Italy1;12.213;-;12.213

@@ -9,7 +9,7 @@ def makeDict(filename):
     Leest de csv-file met de rooster data
     Zet de data om in een lijst van dictionaries
     """
-    y = filename[5:9]
+    y = filename[13:17]
     data=open(filename).read()
     l = []
     

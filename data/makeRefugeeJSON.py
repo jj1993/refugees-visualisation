@@ -67,5 +67,6 @@ if __name__ == '__main__':
         year = makeDict('cleaned_data/'+f)
         data.append(year)
     c = combine(data)
+
     print "Compiling JSON..."
     makeJSON(c, OUTPUTFILE)

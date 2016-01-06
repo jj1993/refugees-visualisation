@@ -12,7 +12,7 @@ def makeDict(filename):
     l = []
     t = []
     for flow in data.split("\r"):
-        t = [e.decode('ascii', errors='replace') for e in flow.split(";")]
+        t = [e.decode('ascii', errors='ignore') for e in flow.split(";")]
         if len(t) == 3: l.append(t)
     return l
                       
