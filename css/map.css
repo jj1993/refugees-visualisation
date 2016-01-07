@@ -1,0 +1,18 @@
+.land {
+	fill: #e0e0e0;
+	stroke: #222222;
+	stroke-width:1px;
+}
+.land:hover {
+	fill: white !important;
+	stroke-width:1.5px;
+}
+.crater{
+	fill: red;
+	stroke:#222222;
+	stroke-width:1px;
+}
+.legrect{
+	fill: #eeeeee;
+	stroke:darkgray;
+}

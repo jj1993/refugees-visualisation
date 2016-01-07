@@ -1,7 +1,7 @@
 [
  {
   "2016": 225714.0, 
-  "codeAsylum": "4", 
+  "codeAsylum": 4, 
   "2015": 300423.0, 
   "2014": 16863.0, 
   "asylum": "Afghanistan", 
@@ -12,7 +12,7 @@
  }, 
  {
   "2016": 154.0, 
-  "codeAsylum": "8", 
+  "codeAsylum": 8, 
   "2015": 104.0, 
   "2014": 93.0, 
   "asylum": "Albania", 
@@ -23,7 +23,7 @@
  }, 
  {
   "2016": 94144.0, 
-  "codeAsylum": "12", 
+  "codeAsylum": 12, 
   "2015": 94128.0, 
   "2014": 94150.0, 
   "asylum": "Algeria", 
@@ -34,7 +34,7 @@
  }, 
  {
   "2016": 15572.0, 
-  "codeAsylum": "24", 
+  "codeAsylum": 24, 
   "2015": 15474.0, 
   "2014": 23783.0, 
   "asylum": "Angola", 
@@ -45,7 +45,7 @@
  }, 
  {
   "2016": 3523.0, 
-  "codeAsylum": "32", 
+  "codeAsylum": 32, 
   "2015": 3498.0, 
   "2014": 3362.0, 
   "asylum": "Argentina", 
@@ -56,7 +56,7 @@
  }, 
  {
   "2016": 15690.0, 
-  "codeAsylum": "51", 
+  "codeAsylum": 51, 
   "2015": 17640.0, 
   "2014": 13732.0, 
   "asylum": "Armenia", 
@@ -67,7 +67,7 @@
  }, 
  {
   "2016": 35582.0, 
-  "codeAsylum": "36", 
+  "codeAsylum": 36, 
   "2015": 35582.0, 
   "2014": 34503.0, 
   "asylum": "Australia", 
@@ -78,7 +78,7 @@
  }, 
  {
   "2016": 60747.0, 
-  "codeAsylum": "40", 
+  "codeAsylum": 40, 
   "2015": 55598.0, 
   "2014": 55598.0, 
   "asylum": "Austria", 
@@ -89,7 +89,7 @@
  }, 
  {
   "2016": 1357.0, 
-  "codeAsylum": "31", 
+  "codeAsylum": 31, 
   "2015": 1299.0, 
   "2014": 1380.0, 
   "asylum": "Azerbaijan", 
@@ -100,7 +100,7 @@
  }, 
  {
   "2016": 277.0, 
-  "codeAsylum": "48", 
+  "codeAsylum": 48, 
   "2015": 311.0, 
   "2014": 294.0, 
   "asylum": "Bahrain", 
@@ -111,7 +111,7 @@
  }, 
  {
   "2016": 232975.0, 
-  "codeAsylum": "50", 
+  "codeAsylum": 50, 
   "2015": 232472.0, 
   "2014": 231145.0, 
   "asylum": "Bangladesh", 
@@ -122,7 +122,7 @@
  }, 
  {
   "2016": 1369.0, 
-  "codeAsylum": "112", 
+  "codeAsylum": 112, 
   "2015": 925.0, 
   "2014": 604.0, 
   "asylum": "Belarus", 
@@ -133,7 +133,7 @@
  }, 
  {
   "2016": 31115.0, 
-  "codeAsylum": "56", 
+  "codeAsylum": 56, 
   "2015": 29179.0, 
   "2014": 25633.0, 
   "asylum": "Belgium", 
@@ -144,7 +144,7 @@
  }, 
  {
   "2016": 0.0, 
-  "codeAsylum": "84", 
+  "codeAsylum": 84, 
   "2015": 10.0, 
   "2014": 21.0, 
   "asylum": "Belize", 
@@ -155,7 +155,7 @@
  }, 
  {
   "2016": 488.0, 
-  "codeAsylum": "204", 
+  "codeAsylum": 204, 
   "2015": 415.0, 
   "2014": 194.0, 
   "asylum": "Benin", 
@@ -166,7 +166,7 @@
  }, 
  {
   "2016": 767.0, 
-  "codeAsylum": "68", 
+  "codeAsylum": 68, 
   "2015": 763.0, 
   "2014": 748.0, 
   "asylum": "Bolivia (Plurinational State of)", 
@@ -177,7 +177,7 @@
  }, 
  {
   "2016": 6805.0, 
-  "codeAsylum": "70", 
+  "codeAsylum": 70, 
   "2015": 6890.0, 
   "2014": 6926.0, 
   "asylum": "Bosnia and Herzegovina", 
@@ -188,7 +188,7 @@
  }, 
  {
   "2016": 2164.0, 
-  "codeAsylum": "72", 
+  "codeAsylum": 72, 
   "2015": 2645.0, 
   "2014": 2773.0, 
   "asylum": "Botswana", 
@@ -199,7 +199,7 @@
  }, 
  {
   "2016": 7762.0, 
-  "codeAsylum": "76", 
+  "codeAsylum": 76, 
   "2015": 7490.0, 
   "2014": 5196.0, 
   "asylum": "Brazil", 
@@ -210,7 +210,7 @@
  }, 
  {
   "2016": 0.0, 
-  "codeAsylum": "92", 
+  "codeAsylum": 92, 
   "2015": 0.0, 
   "2014": 0.0, 
   "asylum": "British Virgin Islands", 
@@ -221,7 +221,7 @@
  }, 
  {
   "2016": 11046.0, 
-  "codeAsylum": "100", 
+  "codeAsylum": 100, 
   "2015": 11046.0, 
   "2014": 4320.0, 
   "asylum": "Bulgaria", 
@@ -232,7 +232,7 @@
  }, 
  {
   "2016": 34027.0, 
-  "codeAsylum": "854", 
+  "codeAsylum": 854, 
   "2015": 31894.0, 
   "2014": 29234.0, 
   "asylum": "Burkina Faso", 
@@ -243,7 +243,7 @@
  }, 
  {
   "2016": 54126.0, 
-  "codeAsylum": "108", 
+  "codeAsylum": 108, 
   "2015": 52936.0, 
   "2014": 45490.0, 
   "asylum": "Burundi", 
@@ -254,7 +254,7 @@
  }, 
  {
   "2016": 80.0, 
-  "codeAsylum": "116", 
+  "codeAsylum": 116, 
   "2015": 63.0, 
   "2014": 68.0, 
   "asylum": "Cambodia", 
@@ -265,7 +265,7 @@
  }, 
  {
   "2016": 302293.0, 
-  "codeAsylum": "120", 
+  "codeAsylum": 120, 
   "2015": 264126.0, 
   "2014": 114753.0, 
   "asylum": "Cameroon", 
@@ -276,7 +276,7 @@
  }, 
  {
   "2016": 149163.0, 
-  "codeAsylum": "124", 
+  "codeAsylum": 124, 
   "2015": 149163.0, 
   "2014": 160349.0, 
   "asylum": "Canada", 
@@ -287,7 +287,7 @@
  }, 
  {
   "2016": 6.0, 
-  "codeAsylum": "136", 
+  "codeAsylum": 136, 
   "2015": 6.0, 
   "2014": 6.0, 
   "asylum": "Cayman Islands", 
@@ -298,7 +298,7 @@
  }, 
  {
   "2016": 7906.0, 
-  "codeAsylum": "140", 
+  "codeAsylum": 140, 
   "2015": 7694.0, 
   "2014": 14322.0, 
   "asylum": "Central African Republic", 
@@ -309,7 +309,7 @@
  }, 
  {
   "2016": 420774.0, 
-  "codeAsylum": "148", 
+  "codeAsylum": 148, 
   "2015": 452897.0, 
   "2014": 434479.0, 
   "asylum": "Chad", 
@@ -320,7 +320,7 @@
  }, 
  {
   "2016": 1798.0, 
-  "codeAsylum": "152", 
+  "codeAsylum": 152, 
   "2015": 1773.0, 
   "2014": 1743.0, 
   "asylum": "Chile", 
@@ -331,7 +331,7 @@
  }, 
  {
   "2016": 301057.0, 
-  "codeAsylum": "156", 
+  "codeAsylum": 156, 
   "2015": 301052.0, 
   "2014": 301047.0, 
   "asylum": "China", 
@@ -342,7 +342,7 @@
  }, 
  {
   "2016": 219.0, 
-  "codeAsylum": "170", 
+  "codeAsylum": 170, 
   "2015": 213.0, 
   "2014": 224.0, 
   "asylum": "Colombia", 
@@ -353,7 +353,7 @@
  }, 
  {
   "2016": 0.0, 
-  "codeAsylum": "174", 
+  "codeAsylum": 174, 
   "2015": 0.0, 
   "2014": 0.0, 
   "asylum": "Comoros", 
@@ -363,13 +363,13 @@
   "2012": 0.0
  }, 
  {
-  "codeAsylum": "178", 
+  "codeAsylum": 178, 
   "asylum": "Congo", 
   "2010": 111411.0
  }, 
  {
   "2016": 3475.0, 
-  "codeAsylum": "188", 
+  "codeAsylum": 188, 
   "2015": 20744.0, 
   "2014": 20569.0, 
   "asylum": "Costa Rica", 
@@ -380,7 +380,7 @@
  }, 
  {
   "2016": 1972.0, 
-  "codeAsylum": "384", 
+  "codeAsylum": 384, 
   "2015": 1925.0, 
   "2014": 2980.0, 
   "asylum": "Cte d'Ivoire", 
@@ -390,7 +390,7 @@
  }, 
  {
   "2016": 710.0, 
-  "codeAsylum": "191", 
+  "codeAsylum": 191, 
   "2015": 726.0, 
   "2014": 684.0, 
   "asylum": "Croatia", 
@@ -401,7 +401,7 @@
  }, 
  {
   "2016": 313.0, 
-  "codeAsylum": "192", 
+  "codeAsylum": 192, 
   "2015": 280.0, 
   "2014": 384.0, 
   "asylum": "Cuba", 
@@ -412,7 +412,7 @@
  }, 
  {
   "2016": 5763.0, 
-  "codeAsylum": "196", 
+  "codeAsylum": 196, 
   "2015": 5126.0, 
   "2014": 3883.0, 
   "asylum": "Cyprus", 
@@ -423,7 +423,7 @@
  }, 
  {
   "2016": 3137.0, 
-  "codeAsylum": "203", 
+  "codeAsylum": 203, 
   "2015": 3137.0, 
   "2014": 3184.0, 
   "asylum": "Czech Republic", 
@@ -434,7 +434,7 @@
  }, 
  {
   "2016": 160271.0, 
-  "codeAsylum": "180", 
+  "codeAsylum": 180, 
   "2015": 119754.0, 
   "2014": 113362.0, 
   "asylum": "Democratic Republic of the Congo", 
@@ -445,7 +445,7 @@
  }, 
  {
   "2016": 17785.0, 
-  "codeAsylum": "208", 
+  "codeAsylum": 208, 
   "2015": 17785.0, 
   "2014": 13170.0, 
   "asylum": "Denmark", 
@@ -456,7 +456,7 @@
  }, 
  {
   "2016": 14787.0, 
-  "codeAsylum": "262", 
+  "codeAsylum": 262, 
   "2015": 20530.0, 
   "2014": 20015.0, 
   "asylum": "Djibouti", 
@@ -467,7 +467,7 @@
  }, 
  {
   "2016": 121722.0, 
-  "codeAsylum": "218", 
+  "codeAsylum": 218, 
   "2015": 122161.0, 
   "2014": 123133.0, 
   "asylum": "Ecuador", 
@@ -478,7 +478,7 @@
  }, 
  {
   "2016": 226344.0, 
-  "codeAsylum": "818", 
+  "codeAsylum": 818, 
   "2015": 236090.0, 
   "2014": 230086.0, 
   "asylum": "Egypt", 
@@ -489,7 +489,7 @@
  }, 
  {
   "2016": 48.0, 
-  "codeAsylum": "222", 
+  "codeAsylum": 222, 
   "2015": 35.0, 
   "2014": 44.0, 
   "asylum": "El Salvador", 
@@ -500,7 +500,7 @@
  }, 
  {
   "2016": 0.0, 
-  "codeAsylum": "226", 
+  "codeAsylum": 226, 
   "2015": 0.0, 
   "2014": 0.0, 
   "asylum": "Equatorial Guinea", 
@@ -511,7 +511,7 @@
  }, 
  {
   "2016": 2944.0, 
-  "codeAsylum": "232", 
+  "codeAsylum": 232, 
   "2015": 2898.0, 
   "2014": 3166.0, 
   "asylum": "Eritrea", 
@@ -522,7 +522,7 @@
  }, 
  {
   "2016": 117.0, 
-  "codeAsylum": "233", 
+  "codeAsylum": 233, 
   "2015": 90.0, 
   "2014": 70.0, 
   "asylum": "Estonia", 
@@ -533,7 +533,7 @@
  }, 
  {
   "2016": 702467.0, 
-  "codeAsylum": "231", 
+  "codeAsylum": 231, 
   "2015": 659524.0, 
   "2014": 433936.0, 
   "asylum": "Ethiopia", 
@@ -544,7 +544,7 @@
  }, 
  {
   "2016": 12.0, 
-  "codeAsylum": "242", 
+  "codeAsylum": 242, 
   "2015": 13.0, 
   "2014": 5.0, 
   "asylum": "Fiji", 
@@ -555,7 +555,7 @@
  }, 
  {
   "2016": 11798.0, 
-  "codeAsylum": "246", 
+  "codeAsylum": 246, 
   "2015": 11798.0, 
   "2014": 11252.0, 
   "asylum": "Finland", 
@@ -566,7 +566,7 @@
  }, 
  {
   "2016": 264972.0, 
-  "codeAsylum": "250", 
+  "codeAsylum": 250, 
   "2015": 252264.0, 
   "2014": 232487.0, 
   "asylum": "France", 
@@ -577,7 +577,7 @@
  }, 
  {
   "2016": 1008.0, 
-  "codeAsylum": "266", 
+  "codeAsylum": 266, 
   "2015": 1013.0, 
   "2014": 1594.0, 
   "asylum": "Gabon", 
@@ -588,7 +588,7 @@
  }, 
  {
   "2016": 11773.0, 
-  "codeAsylum": "270", 
+  "codeAsylum": 270, 
   "2015": 11608.0, 
   "2014": 9563.0, 
   "asylum": "Gambia", 
@@ -599,7 +599,7 @@
  }, 
  {
   "2016": 1659.0, 
-  "codeAsylum": "268", 
+  "codeAsylum": 268, 
   "2015": 857.0, 
   "2014": 847.0, 
   "asylum": "Georgia", 
@@ -609,7 +609,7 @@
  }, 
  {
   "2016": 250299.0, 
-  "codeAsylum": "276", 
+  "codeAsylum": 276, 
   "2015": 216973.0, 
   "2014": 187567.0, 
   "asylum": "Germany", 
@@ -620,7 +620,7 @@
  }, 
  {
   "2016": 18476.0, 
-  "codeAsylum": "288", 
+  "codeAsylum": 288, 
   "2015": 18450.0, 
   "2014": 18681.0, 
   "asylum": "Ghana", 
@@ -631,7 +631,7 @@
  }, 
  {
   "2016": 8231.0, 
-  "codeAsylum": "300", 
+  "codeAsylum": 300, 
   "2015": 10304.0, 
   "2014": 3485.0, 
   "asylum": "Greece", 
@@ -642,7 +642,7 @@
  }, 
  {
   "2016": 202.0, 
-  "codeAsylum": "320", 
+  "codeAsylum": 320, 
   "2015": 164.0, 
   "2014": 160.0, 
   "asylum": "Guatemala", 
@@ -653,7 +653,7 @@
  }, 
  {
   "2016": 8704.0, 
-  "codeAsylum": "324", 
+  "codeAsylum": 324, 
   "2015": 8766.0, 
   "2014": 8560.0, 
   "asylum": "Guinea", 
@@ -664,7 +664,7 @@
  }, 
  {
   "2016": 8684.0, 
-  "codeAsylum": "624", 
+  "codeAsylum": 624, 
   "2015": 8684.0, 
   "2014": 8535.0, 
   "asylum": "Guinea-Bissau", 
@@ -675,7 +675,7 @@
  }, 
  {
   "2016": 5.0, 
-  "codeAsylum": "332", 
+  "codeAsylum": 332, 
   "2015": 3.0, 
   "2014": 0.0, 
   "asylum": "Haiti", 
@@ -686,7 +686,7 @@
  }, 
  {
   "2016": 23.0, 
-  "codeAsylum": "340", 
+  "codeAsylum": 340, 
   "2015": 26.0, 
   "2014": 16.0, 
   "asylum": "Honduras", 
@@ -697,7 +697,7 @@
  }, 
  {
   "2016": 4192.0, 
-  "codeAsylum": "348", 
+  "codeAsylum": 348, 
   "2015": 2867.0, 
   "2014": 2440.0, 
   "asylum": "Hungary", 
@@ -708,7 +708,7 @@
  }, 
  {
   "2016": 104.0, 
-  "codeAsylum": "352", 
+  "codeAsylum": 352, 
   "2015": 99.0, 
   "2014": 79.0, 
   "asylum": "Iceland", 
@@ -719,7 +719,7 @@
  }, 
  {
   "2016": 200383.0, 
-  "codeAsylum": "356", 
+  "codeAsylum": 356, 
   "2015": 199937.0, 
   "2014": 188395.0, 
   "asylum": "India", 
@@ -730,7 +730,7 @@
  }, 
  {
   "2016": 5277.0, 
-  "codeAsylum": "360", 
+  "codeAsylum": 360, 
   "2015": 4270.0, 
   "2014": 3206.0, 
   "asylum": "Indonesia", 
@@ -741,14 +741,14 @@
  }, 
  {
   "2015": 982027.0, 
-  "codeAsylum": "364", 
+  "codeAsylum": 364, 
   "asylum": "Iran (Islamic Republic of)", 
   "2016": 979441.0, 
   "2010": 1070488.0
  }, 
  {
   "2016": 288035.0, 
-  "codeAsylum": "368", 
+  "codeAsylum": 368, 
   "2015": 271143.0, 
   "2014": 246298.0, 
   "asylum": "Iraq", 
@@ -759,7 +759,7 @@
  }, 
  {
   "2016": 5853.0, 
-  "codeAsylum": "372", 
+  "codeAsylum": 372, 
   "2015": 5853.0, 
   "2014": 6001.0, 
   "asylum": "Ireland", 
@@ -770,7 +770,7 @@
  }, 
  {
   "2016": 38500.0, 
-  "codeAsylum": "376", 
+  "codeAsylum": 376, 
   "2015": 39716.0, 
   "2014": 48325.0, 
   "asylum": "Israel", 
@@ -781,7 +781,7 @@
  }, 
  {
   "2016": 93715.0, 
-  "codeAsylum": "380", 
+  "codeAsylum": 380, 
   "2015": 93715.0, 
   "2014": 78061.0, 
   "asylum": "Italy", 
@@ -792,7 +792,7 @@
  }, 
  {
   "2016": 15.0, 
-  "codeAsylum": "388", 
+  "codeAsylum": 388, 
   "2015": 22.0, 
   "2014": 21.0, 
   "asylum": "Jamaica", 
@@ -803,7 +803,7 @@
  }, 
  {
   "2016": 2419.0, 
-  "codeAsylum": "392", 
+  "codeAsylum": 392, 
   "2015": 2560.0, 
   "2014": 2584.0, 
   "asylum": "Japan", 
@@ -814,7 +814,7 @@
  }, 
  {
   "2016": 664102.0, 
-  "codeAsylum": "400", 
+  "codeAsylum": 400, 
   "2015": 654141.0, 
   "2014": 641915.0, 
   "asylum": "Jordan", 
@@ -825,7 +825,7 @@
  }, 
  {
   "2016": 662.0, 
-  "codeAsylum": "398", 
+  "codeAsylum": 398, 
   "2015": 633.0, 
   "2014": 584.0, 
   "asylum": "Kazakhstan", 
@@ -836,7 +836,7 @@
  }, 
  {
   "2016": 552272.0, 
-  "codeAsylum": "404", 
+  "codeAsylum": 404, 
   "2015": 551352.0, 
   "2014": 534938.0, 
   "asylum": "Kenya", 
@@ -847,7 +847,7 @@
  }, 
  {
   "2016": 593.0, 
-  "codeAsylum": "414", 
+  "codeAsylum": 414, 
   "2015": 614.0, 
   "2014": 635.0, 
   "asylum": "Kuwait", 
@@ -858,7 +858,7 @@
  }, 
  {
   "2016": 433.0, 
-  "codeAsylum": "417", 
+  "codeAsylum": 417, 
   "2015": 482.0, 
   "2014": 466.0, 
   "asylum": "Kyrgyzstan", 
@@ -869,7 +869,7 @@
  }, 
  {
   "2016": 0.0, 
-  "codeAsylum": "418", 
+  "codeAsylum": 418, 
   "2015": 0.0, 
   "2014": 0.0, 
   "asylum": "Lao People's Democratic Republic", 
@@ -879,7 +879,7 @@
  }, 
  {
   "2016": 195.0, 
-  "codeAsylum": "428", 
+  "codeAsylum": 428, 
   "2015": 183.0, 
   "2014": 160.0, 
   "asylum": "Latvia", 
@@ -890,7 +890,7 @@
  }, 
  {
   "2016": 1172388.0, 
-  "codeAsylum": "422", 
+  "codeAsylum": 422, 
   "2015": 1154040.0, 
   "2014": 856546.0, 
   "asylum": "Lebanon", 
@@ -901,7 +901,7 @@
  }, 
  {
   "2016": 44.0, 
-  "codeAsylum": "426", 
+  "codeAsylum": 426, 
   "2015": 44.0, 
   "2014": 30.0, 
   "asylum": "Lesotho", 
@@ -912,7 +912,7 @@
  }, 
  {
   "2016": 38904.0, 
-  "codeAsylum": "430", 
+  "codeAsylum": 430, 
   "2015": 38595.0, 
   "2014": 53253.0, 
   "asylum": "Liberia", 
@@ -922,14 +922,14 @@
   "2012": 128293.0
  }, 
  {
-  "codeAsylum": "434", 
+  "codeAsylum": 434, 
   "asylum": "Libya", 
   "2011": 7923.0, 
   "2010": 9005.0
  }, 
  {
   "2016": 107.0, 
-  "codeAsylum": "438", 
+  "codeAsylum": 438, 
   "2015": 103.0, 
   "2014": 97.0, 
   "asylum": "Liechtenstein", 
@@ -940,7 +940,7 @@
  }, 
  {
   "2016": 1055.0, 
-  "codeAsylum": "440", 
+  "codeAsylum": 440, 
   "2015": 1007.0, 
   "2014": 916.0, 
   "asylum": "Lithuania", 
@@ -951,7 +951,7 @@
  }, 
  {
   "2016": 1192.0, 
-  "codeAsylum": "442", 
+  "codeAsylum": 442, 
   "2015": 1108.0, 
   "2014": 2873.0, 
   "asylum": "Luxembourg", 
@@ -962,7 +962,7 @@
  }, 
  {
   "2016": 10.0, 
-  "codeAsylum": "450", 
+  "codeAsylum": 450, 
   "2015": 11.0, 
   "2014": 12.0, 
   "asylum": "Madagascar", 
@@ -973,7 +973,7 @@
  }, 
  {
   "2016": 8963.0, 
-  "codeAsylum": "454", 
+  "codeAsylum": 454, 
   "2015": 5874.0, 
   "2014": 5796.0, 
   "asylum": "Malawi", 
@@ -984,7 +984,7 @@
  }, 
  {
   "2016": 97573.0, 
-  "codeAsylum": "458", 
+  "codeAsylum": 458, 
   "2015": 99381.0, 
   "2014": 97513.0, 
   "asylum": "Malaysia", 
@@ -995,7 +995,7 @@
  }, 
  {
   "2016": 14970.0, 
-  "codeAsylum": "466", 
+  "codeAsylum": 466, 
   "2015": 15195.0, 
   "2014": 14316.0, 
   "asylum": "Mali", 
@@ -1006,7 +1006,7 @@
  }, 
  {
   "2016": 6095.0, 
-  "codeAsylum": "470", 
+  "codeAsylum": 470, 
   "2015": 6095.0, 
   "2014": 9906.0, 
   "asylum": "Malta", 
@@ -1017,7 +1017,7 @@
  }, 
  {
   "2016": 76851.0, 
-  "codeAsylum": "478", 
+  "codeAsylum": 478, 
   "2015": 75635.0, 
   "2014": 92767.0, 
   "asylum": "Mauritania", 
@@ -1028,7 +1028,7 @@
  }, 
  {
   "2016": 0.0, 
-  "codeAsylum": "480", 
+  "codeAsylum": 480, 
   "2015": 0.0, 
   "2014": 0.0, 
   "asylum": "Mauritius", 
@@ -1039,7 +1039,7 @@
  }, 
  {
   "2016": 2158.0, 
-  "codeAsylum": "484", 
+  "codeAsylum": 484, 
   "2015": 1837.0, 
   "2014": 1831.0, 
   "asylum": "Mexico", 
@@ -1050,7 +1050,7 @@
  }, 
  {
   "2016": 0.0, 
-  "codeAsylum": "583", 
+  "codeAsylum": 583, 
   "2015": 0.0, 
   "2014": 0.0, 
   "asylum": "Micronesia (Federated States of)", 
@@ -1061,7 +1061,7 @@
  }, 
  {
   "2016": 11.0, 
-  "codeAsylum": "496", 
+  "codeAsylum": 496, 
   "2015": 6.0, 
   "2014": 9.0, 
   "asylum": "Mongolia", 
@@ -1072,7 +1072,7 @@
  }, 
  {
   "2016": 6203.0, 
-  "codeAsylum": "499", 
+  "codeAsylum": 499, 
   "2015": 6462.0, 
   "2014": 8476.0, 
   "asylum": "Montenegro", 
@@ -1083,7 +1083,7 @@
  }, 
  {
   "2016": 2144.0, 
-  "codeAsylum": "504", 
+  "codeAsylum": 504, 
   "2015": 1216.0, 
   "2014": 1470.0, 
   "asylum": "Morocco", 
@@ -1094,7 +1094,7 @@
  }, 
  {
   "2016": 4552.0, 
-  "codeAsylum": "508", 
+  "codeAsylum": 508, 
   "2015": 4536.0, 
   "2014": 4445.0, 
   "asylum": "Mozambique", 
@@ -1105,7 +1105,7 @@
  }, 
  {
   "2016": 0.0, 
-  "codeAsylum": "104", 
+  "codeAsylum": 104, 
   "2015": 0.0, 
   "2014": 0.0, 
   "asylum": "Myanmar", 
@@ -1116,7 +1116,7 @@
  }, 
  {
   "2016": 1659.0, 
-  "codeAsylum": "516", 
+  "codeAsylum": 516, 
   "2015": 1767.0, 
   "2014": 2332.0, 
   "asylum": "Namibia", 
@@ -1127,7 +1127,7 @@
  }, 
  {
   "2016": 36287.0, 
-  "codeAsylum": "524", 
+  "codeAsylum": 524, 
   "2015": 38490.0, 
   "2014": 46305.0, 
   "asylum": "Nepal", 
@@ -1138,7 +1138,7 @@
  }, 
  {
   "2016": 82494.0, 
-  "codeAsylum": "528", 
+  "codeAsylum": 528, 
   "2015": 82494.0, 
   "2014": 74707.0, 
   "asylum": "Netherlands", 
@@ -1149,7 +1149,7 @@
  }, 
  {
   "2016": 1349.0, 
-  "codeAsylum": "554", 
+  "codeAsylum": 554, 
   "2015": 1349.0, 
   "2014": 1403.0, 
   "asylum": "New Zealand", 
@@ -1160,7 +1160,7 @@
  }, 
  {
   "2016": 361.0, 
-  "codeAsylum": "558", 
+  "codeAsylum": 558, 
   "2015": 280.0, 
   "2014": 189.0, 
   "asylum": "Nicaragua", 
@@ -1171,7 +1171,7 @@
  }, 
  {
   "2016": 82064.0, 
-  "codeAsylum": "562", 
+  "codeAsylum": 562, 
   "2015": 77830.0, 
   "2014": 57661.0, 
   "asylum": "Niger", 
@@ -1182,7 +1182,7 @@
  }, 
  {
   "2016": 1279.0, 
-  "codeAsylum": "566", 
+  "codeAsylum": 566, 
   "2015": 1239.0, 
   "2014": 1694.0, 
   "asylum": "Nigeria", 
@@ -1193,7 +1193,7 @@
  }, 
  {
   "2016": 47043.0, 
-  "codeAsylum": "578", 
+  "codeAsylum": 578, 
   "2015": 47043.0, 
   "2014": 46106.0, 
   "asylum": "Norway", 
@@ -1203,14 +1203,14 @@
   "2012": 40691.0
  }, 
  {
-  "codeAsylum": "275", 
+  "codeAsylum": 275, 
   "asylum": "State of Palestine", 
   "2010": 0.0, 
   "2012": 0.0
  }, 
  {
   "2016": 122.0, 
-  "codeAsylum": "512", 
+  "codeAsylum": 512, 
   "2015": 151.0, 
   "2014": 138.0, 
   "asylum": "Oman", 
@@ -1221,7 +1221,7 @@
  }, 
  {
   "2016": 1540854.0, 
-  "codeAsylum": "586", 
+  "codeAsylum": 586, 
   "2015": 1505525.0, 
   "2014": 1616507.0, 
   "asylum": "Pakistan", 
@@ -1232,7 +1232,7 @@
  }, 
  {
   "2016": 1.0, 
-  "codeAsylum": "585", 
+  "codeAsylum": 585, 
   "2015": 1.0, 
   "2014": 1.0, 
   "asylum": "Palau", 
@@ -1243,7 +1243,7 @@
  }, 
  {
   "2016": 17303.0, 
-  "codeAsylum": "591", 
+  "codeAsylum": 591, 
   "2015": 17271.0, 
   "2014": 17665.0, 
   "asylum": "Panama", 
@@ -1254,7 +1254,7 @@
  }, 
  {
   "2016": 9510.0, 
-  "codeAsylum": "598", 
+  "codeAsylum": 598, 
   "2015": 9510.0, 
   "2014": 9378.0, 
   "asylum": "Papua New Guinea", 
@@ -1265,7 +1265,7 @@
  }, 
  {
   "2016": 161.0, 
-  "codeAsylum": "600", 
+  "codeAsylum": 600, 
   "2015": 153.0, 
   "2014": 136.0, 
   "asylum": "Paraguay", 
@@ -1276,7 +1276,7 @@
  }, 
  {
   "2016": 1407.0, 
-  "codeAsylum": "604", 
+  "codeAsylum": 604, 
   "2015": 1303.0, 
   "2014": 1162.0, 
   "asylum": "Peru", 
@@ -1287,7 +1287,7 @@
  }, 
  {
   "2016": 254.0, 
-  "codeAsylum": "608", 
+  "codeAsylum": 608, 
   "2015": 222.0, 
   "2014": 182.0, 
   "asylum": "Philippines", 
@@ -1298,7 +1298,7 @@
  }, 
  {
   "2016": 15741.0, 
-  "codeAsylum": "616", 
+  "codeAsylum": 616, 
   "2015": 15741.0, 
   "2014": 16438.0, 
   "asylum": "Poland", 
@@ -1309,7 +1309,7 @@
  }, 
  {
   "2016": 699.0, 
-  "codeAsylum": "620", 
+  "codeAsylum": 620, 
   "2015": 699.0, 
   "2014": 598.0, 
   "asylum": "Portugal", 
@@ -1320,7 +1320,7 @@
  }, 
  {
   "2016": 133.0, 
-  "codeAsylum": "634", 
+  "codeAsylum": 634, 
   "2015": 133.0, 
   "2014": 130.0, 
   "asylum": "Qatar", 
@@ -1331,7 +1331,7 @@
  }, 
  {
   "2016": 1313.0, 
-  "codeAsylum": "410", 
+  "codeAsylum": 410, 
   "2015": 1173.0, 
   "2014": 547.0, 
   "asylum": "Republic of Korea", 
@@ -1342,7 +1342,7 @@
  }, 
  {
   "2016": 389.0, 
-  "codeAsylum": "498", 
+  "codeAsylum": 498, 
   "2015": 335.0, 
   "2014": 250.0, 
   "asylum": "Republic of Moldavia", 
@@ -1353,7 +1353,7 @@
  }, 
  {
   "2016": 2426.0, 
-  "codeAsylum": "642", 
+  "codeAsylum": 642, 
   "2015": 2182.0, 
   "2014": 1770.0, 
   "asylum": "Romania", 
@@ -1364,7 +1364,7 @@
  }, 
  {
   "2016": 315313.0, 
-  "codeAsylum": "643", 
+  "codeAsylum": 643, 
   "2015": 235750.0, 
   "2014": 3458.0, 
   "asylum": "Russian Federation", 
@@ -1375,7 +1375,7 @@
  }, 
  {
   "2016": 132743.0, 
-  "codeAsylum": "646", 
+  "codeAsylum": 646, 
   "2015": 73820.0, 
   "2014": 73349.0, 
   "asylum": "Rwanda", 
@@ -1386,7 +1386,7 @@
  }, 
  {
   "2016": 1.0, 
-  "codeAsylum": "659", 
+  "codeAsylum": 659, 
   "2015": 1.0, 
   "2014": 0.0, 
   "asylum": "Saint Kitts and Nevis", 
@@ -1397,7 +1397,7 @@
  }, 
  {
   "2016": 2.0, 
-  "codeAsylum": "662", 
+  "codeAsylum": 662, 
   "2015": 3.0, 
   "2014": 5.0, 
   "asylum": "Saint Lucia", 
@@ -1408,7 +1408,7 @@
  }, 
  {
   "2016": 0.0, 
-  "codeAsylum": "670", 
+  "codeAsylum": 670, 
   "2015": 0.0, 
   "2014": 0.0, 
   "asylum": "Saint Vincent and the Grenadines", 
@@ -1418,7 +1418,7 @@
  }, 
  {
   "2016": 0.0, 
-  "codeAsylum": "678", 
+  "codeAsylum": 678, 
   "2015": 0.0, 
   "2014": 0.0, 
   "asylum": "Sao Tome and Principe", 
@@ -1429,7 +1429,7 @@
  }, 
  {
   "2016": 211.0, 
-  "codeAsylum": "682", 
+  "codeAsylum": 682, 
   "2015": 561.0, 
   "2014": 559.0, 
   "asylum": "Saudi Arabia", 
@@ -1440,7 +1440,7 @@
  }, 
  {
   "2016": 14304.0, 
-  "codeAsylum": "686", 
+  "codeAsylum": 686, 
   "2015": 14274.0, 
   "2014": 14247.0, 
   "asylum": "Senegal", 
@@ -1451,7 +1451,7 @@
  }, 
  {
   "2016": 35309.0, 
-  "codeAsylum": "688", 
+  "codeAsylum": 688, 
   "2015": 43751.0, 
   "2014": 57083.0, 
   "asylum": "Serbia", 
@@ -1461,7 +1461,7 @@
  }, 
  {
   "2016": 1371.0, 
-  "codeAsylum": "694", 
+  "codeAsylum": 694, 
   "2015": 1372.0, 
   "2014": 2817.0, 
   "asylum": "Sierra Leone", 
@@ -1472,7 +1472,7 @@
  }, 
  {
   "2016": 0.0, 
-  "codeAsylum": "702", 
+  "codeAsylum": 702, 
   "2015": 3.0, 
   "2014": 3.0, 
   "asylum": "Singapore", 
@@ -1483,7 +1483,7 @@
  }, 
  {
   "2016": 799.0, 
-  "codeAsylum": "703", 
+  "codeAsylum": 703, 
   "2015": 799.0, 
   "2014": 701.0, 
   "asylum": "Slovakia", 
@@ -1494,7 +1494,7 @@
  }, 
  {
   "2016": 283.0, 
-  "codeAsylum": "705", 
+  "codeAsylum": 705, 
   "2015": 257.0, 
   "2014": 213.0, 
   "asylum": "Slovenia", 
@@ -1505,7 +1505,7 @@
  }, 
  {
   "2016": 3582.0, 
-  "codeAsylum": "706", 
+  "codeAsylum": 706, 
   "2015": 2729.0, 
   "2014": 2425.0, 
   "asylum": "Somalia", 
@@ -1516,7 +1516,7 @@
  }, 
  {
   "2016": 114512.0, 
-  "codeAsylum": "710", 
+  "codeAsylum": 710, 
   "2015": 112192.0, 
   "2014": 65881.0, 
   "asylum": "South Africa", 
@@ -1527,7 +1527,7 @@
  }, 
  {
   "2016": 5798.0, 
-  "codeAsylum": "724", 
+  "codeAsylum": 724, 
   "2015": 5798.0, 
   "2014": 4637.0, 
   "asylum": "Spain", 
@@ -1538,7 +1538,7 @@
  }, 
  {
   "2016": 848.0, 
-  "codeAsylum": "144", 
+  "codeAsylum": 144, 
   "2015": 511.0, 
   "2014": 145.0, 
   "asylum": "Sri Lanka", 
@@ -1549,7 +1549,7 @@
  }, 
  {
   "2016": 356191.0, 
-  "codeAsylum": "729", 
+  "codeAsylum": 729, 
   "2015": 277833.0, 
   "2014": 159857.0, 
   "asylum": "Sudan", 
@@ -1560,7 +1560,7 @@
  }, 
  {
   "2016": 1.0, 
-  "codeAsylum": "740", 
+  "codeAsylum": 740, 
   "2015": 0.0, 
   "2014": 0.0, 
   "asylum": "Suriname", 
@@ -1571,7 +1571,7 @@
  }, 
  {
   "2016": 539.0, 
-  "codeAsylum": "748", 
+  "codeAsylum": 748, 
   "2015": 515.0, 
   "2014": 507.0, 
   "asylum": "Swaziland", 
@@ -1582,7 +1582,7 @@
  }, 
  {
   "2016": 142207.0, 
-  "codeAsylum": "752", 
+  "codeAsylum": 752, 
   "2015": 142207.0, 
   "2014": 114175.0, 
   "asylum": "Sweden", 
@@ -1593,7 +1593,7 @@
  }, 
  {
   "2016": 69390.0, 
-  "codeAsylum": "756", 
+  "codeAsylum": 756, 
   "2015": 62620.0, 
   "2014": 52464.0, 
   "asylum": "Switzerland", 
@@ -1604,7 +1604,7 @@
  }, 
  {
   "2016": 149200.0, 
-  "codeAsylum": "760", 
+  "codeAsylum": 760, 
   "2015": 149140.0, 
   "2014": 149292.0, 
   "asylum": "Syrian Arab Republic", 
@@ -1614,7 +1614,7 @@
  }, 
  {
   "2016": 1782.0, 
-  "codeAsylum": "762", 
+  "codeAsylum": 762, 
   "2015": 2026.0, 
   "2014": 2048.0, 
   "asylum": "Tajikistan", 
@@ -1625,7 +1625,7 @@
  }, 
  {
   "2016": 110372.0, 
-  "codeAsylum": "764", 
+  "codeAsylum": 764, 
   "2015": 130238.0, 
   "2014": 136499.0, 
   "asylum": "Thailand", 
@@ -1636,7 +1636,7 @@
  }, 
  {
   "2016": 828.0, 
-  "codeAsylum": "807", 
+  "codeAsylum": 807, 
   "2015": 883.0, 
   "2014": 982.0, 
   "asylum": "The former Yugoslav Republic of Macedonia", 
@@ -1647,7 +1647,7 @@
  }, 
  {
   "2016": 0.0, 
-  "codeAsylum": "626", 
+  "codeAsylum": 626, 
   "2015": 0.0, 
   "2014": 0.0, 
   "asylum": "Timor-Leste", 
@@ -1658,7 +1658,7 @@
  }, 
  {
   "2016": 21877.0, 
-  "codeAsylum": "768", 
+  "codeAsylum": 768, 
   "2015": 21778.0, 
   "2014": 20613.0, 
   "asylum": "Togo", 
@@ -1669,7 +1669,7 @@
  }, 
  {
   "2016": 121.0, 
-  "codeAsylum": "780", 
+  "codeAsylum": 780, 
   "2015": 83.0, 
   "2014": 20.0, 
   "asylum": "Trinidad and Tobago", 
@@ -1680,7 +1680,7 @@
  }, 
  {
   "2016": 824.0, 
-  "codeAsylum": "788", 
+  "codeAsylum": 788, 
   "2015": 901.0, 
   "2014": 730.0, 
   "asylum": "Tunisia", 
@@ -1691,7 +1691,7 @@
  }, 
  {
   "2016": 1838848.0, 
-  "codeAsylum": "792", 
+  "codeAsylum": 792, 
   "2015": 1587374.0, 
   "2014": 609938.0, 
   "asylum": "Turkey", 
@@ -1702,7 +1702,7 @@
  }, 
  {
   "2016": 27.0, 
-  "codeAsylum": "795", 
+  "codeAsylum": 795, 
   "2015": 35.0, 
   "2014": 45.0, 
   "asylum": "Turkmenistan", 
@@ -1713,7 +1713,7 @@
  }, 
  {
   "2016": 428397.0, 
-  "codeAsylum": "800", 
+  "codeAsylum": 800, 
   "2015": 385513.0, 
   "2014": 220555.0, 
   "asylum": "Uganda", 
@@ -1724,7 +1724,7 @@
  }, 
  {
   "2016": 3232.0, 
-  "codeAsylum": "804", 
+  "codeAsylum": 804, 
   "2015": 3219.0, 
   "2014": 2968.0, 
   "asylum": "Ukraine", 
@@ -1735,7 +1735,7 @@
  }, 
  {
   "2016": 424.0, 
-  "codeAsylum": "784", 
+  "codeAsylum": 784, 
   "2015": 417.0, 
   "2014": 603.0, 
   "asylum": "United Arab Emirates", 
@@ -1746,7 +1746,7 @@
  }, 
  {
   "2016": 117234.0, 
-  "codeAsylum": "826", 
+  "codeAsylum": 826, 
   "2015": 117161.0, 
   "2014": 126055.0, 
   "asylum": "United Kingdom of Great Britain and Northern Ireland", 
@@ -1757,7 +1757,7 @@
  }, 
  {
   "2016": 159014.0, 
-  "codeAsylum": "834", 
+  "codeAsylum": 834, 
   "2015": 88492.0, 
   "2014": 102099.0, 
   "asylum": "United Republic of Tanzania", 
@@ -1768,7 +1768,7 @@
  }, 
  {
   "2016": 267222.0, 
-  "codeAsylum": "840", 
+  "codeAsylum": 840, 
   "2015": 267222.0, 
   "asylum": "United States of America", 
   "2011": 264574.0, 
@@ -1776,7 +1776,7 @@
  }, 
  {
   "2016": 289.0, 
-  "codeAsylum": "858", 
+  "codeAsylum": 858, 
   "2015": 272.0, 
   "2014": 203.0, 
   "asylum": "Uruguay", 
@@ -1787,7 +1787,7 @@
  }, 
  {
   "2016": 118.0, 
-  "codeAsylum": "860", 
+  "codeAsylum": 860, 
   "2015": 125.0, 
   "2014": 141.0, 
   "asylum": "Uzbekistan", 
@@ -1798,7 +1798,7 @@
  }, 
  {
   "2016": 0.0, 
-  "codeAsylum": "548", 
+  "codeAsylum": 548, 
   "2015": 0.0, 
   "2014": 2.0, 
   "asylum": "Vanuatu", 
@@ -1808,13 +1808,13 @@
   "2012": 0.0
  }, 
  {
-  "codeAsylum": "862", 
+  "codeAsylum": 862, 
   "asylum": "Venezuela (Bolivarian Republic of)", 
   "2010": 1313.0
  }, 
  {
   "2016": 0.0, 
-  "codeAsylum": "704", 
+  "codeAsylum": 704, 
   "2015": 0.0, 
   "2014": 0.0, 
   "asylum": "Viet Nam", 
@@ -1825,7 +1825,7 @@
  }, 
  {
   "2016": 263047.0, 
-  "codeAsylum": "887", 
+  "codeAsylum": 887, 
   "2015": 257645.0, 
   "2014": 241288.0, 
   "asylum": "Yemen", 
@@ -1836,7 +1836,7 @@
  }, 
  {
   "2016": 25737.0, 
-  "codeAsylum": "894", 
+  "codeAsylum": 894, 
   "2015": 25578.0, 
   "2014": 23594.0, 
   "asylum": "Zambia", 
@@ -1847,7 +1847,7 @@
  }, 
  {
   "2016": 6085.0, 
-  "codeAsylum": "716", 
+  "codeAsylum": 716, 
   "2015": 6079.0, 
   "2014": 6389.0, 
   "asylum": "Zimbabwe", 
@@ -1858,7 +1858,7 @@
  }, 
  {
   "2016": 0.0, 
-  "codeAsylum": "28", 
+  "codeAsylum": 28, 
   "2015": 0.0, 
   "2014": 0.0, 
   "asylum": "Antigua and Barbuda", 
@@ -1868,7 +1868,7 @@
  }, 
  {
   "2016": 0.0, 
-  "codeAsylum": "533", 
+  "codeAsylum": 533, 
   "2015": 0.0, 
   "2014": 1.0, 
   "asylum": "Aruba", 
@@ -1878,7 +1878,7 @@
  }, 
  {
   "2016": 7.0, 
-  "codeAsylum": "44", 
+  "codeAsylum": 44, 
   "2015": 13.0, 
   "2014": 15.0, 
   "asylum": "Bahamas", 
@@ -1888,7 +1888,7 @@
  }, 
  {
   "2016": 0.0, 
-  "codeAsylum": "96", 
+  "codeAsylum": 96, 
   "2015": 0.0, 
   "2014": 0.0, 
   "asylum": "Brunei Darussalam", 
@@ -1897,7 +1897,7 @@
   "2012": 0.0
  }, 
  {
-  "codeAsylum": "178", 
+  "codeAsylum": 178, 
   "2014": 51037.0, 
   "asylum": "Congo", 
   "2011": 133112.0, 
@@ -1905,12 +1905,12 @@
   "2012": 141232.0
  }, 
  {
-  "codeAsylum": "384", 
+  "codeAsylum": 384, 
   "asylum": "Cte d'Ivoire", 
   "2011": 26218.0
  }, 
  {
-  "codeAsylum": "531", 
+  "codeAsylum": 531, 
   "asylum": "Curaao", 
   "2011": 7.0, 
   "2013": 14.0, 
@@ -1918,7 +1918,7 @@
  }, 
  {
   "2016": 0.0, 
-  "codeAsylum": "212", 
+  "codeAsylum": 212, 
   "2015": 0.0, 
   "2014": 0.0, 
   "asylum": "Dominica", 
@@ -1928,7 +1928,7 @@
  }, 
  {
   "2016": 609.0, 
-  "codeAsylum": "214", 
+  "codeAsylum": 214, 
   "2015": 608.0, 
   "2014": 721.0, 
   "asylum": "Dominican Republic", 
@@ -1937,13 +1937,13 @@
   "2012": 595.0
  }, 
  {
-  "codeAsylum": "268", 
+  "codeAsylum": 268, 
   "asylum": "Georgia", 
   "2011": 639.0
  }, 
  {
   "2016": 0.0, 
-  "codeAsylum": "308", 
+  "codeAsylum": 308, 
   "2015": 0.0, 
   "2014": 0.0, 
   "asylum": "Grenada", 
@@ -1953,7 +1953,7 @@
  }, 
  {
   "2016": 11.0, 
-  "codeAsylum": "328", 
+  "codeAsylum": 328, 
   "2015": 11.0, 
   "2014": 11.0, 
   "asylum": "Guyana", 
@@ -1962,7 +1962,7 @@
   "2012": 7.0
  }, 
  {
-  "codeAsylum": "364", 
+  "codeAsylum": 364, 
   "2014": 857354.0, 
   "asylum": "Iran (Islamic Republic of)", 
   "2011": 1073366.0, 
@@ -1970,13 +1970,13 @@
   "2012": 886468.0
  }, 
  {
-  "codeAsylum": "418", 
+  "codeAsylum": 418, 
   "asylum": "Lao People's Democratic Republic", 
   "2011": 0.0
  }, 
  {
   "2016": 33.0, 
-  "codeAsylum": "492", 
+  "codeAsylum": 492, 
   "2015": 33.0, 
   "2014": 34.0, 
   "asylum": "Monaco", 
@@ -1986,7 +1986,7 @@
  }, 
  {
   "2016": 0.0, 
-  "codeAsylum": "500", 
+  "codeAsylum": 500, 
   "2015": 0.0, 
   "2014": 0.0, 
   "asylum": "Montserrat", 
@@ -1995,25 +1995,25 @@
   "2012": 0.0
  }, 
  {
-  "codeAsylum": "663", 
+  "codeAsylum": 663, 
   "asylum": "Saint Martin (French part)", 
   "2011": 1.0, 
   "2013": 3.0, 
   "2012": 3.0
  }, 
  {
-  "codeAsylum": "308", 
+  "codeAsylum": 308, 
   "asylum": "Grenada", 
   "2011": 0.0
  }, 
  {
-  "codeAsylum": "760", 
+  "codeAsylum": 760, 
   "asylum": "Syrian Arab Republic", 
   "2011": 1005472.0
  }, 
  {
   "2016": 0.0, 
-  "codeAsylum": "776", 
+  "codeAsylum": 776, 
   "2015": 0.0, 
   "2014": 3.0, 
   "asylum": "Tonga", 
@@ -2023,7 +2023,7 @@
  }, 
  {
   "2016": 174191.0, 
-  "codeAsylum": "862", 
+  "codeAsylum": 862, 
   "2015": 173600.0, 
   "2014": 204340.0, 
   "asylum": "Venezuela (Bolivarian Republic of)", 
@@ -2031,7 +2031,7 @@
  }, 
  {
   "2016": 27948.0, 
-  "codeAsylum": "434", 
+  "codeAsylum": 434, 
   "2015": 27964.0, 
   "2014": 25561.0, 
   "asylum": "Libya", 
@@ -2040,7 +2040,7 @@
  }, 
  {
   "2016": 265887.0, 
-  "codeAsylum": "728", 
+  "codeAsylum": 728, 
   "2015": 248152.0, 
   "2014": 229587.0, 
   "asylum": "South Sudan", 
@@ -2048,21 +2048,21 @@
   "2012": 105023.0
  }, 
  {
-  "codeAsylum": "840", 
+  "codeAsylum": 840, 
   "2014": 263662.0, 
   "asylum": "United States of America", 
   "2013": 262030.0, 
   "2012": 264763.0
  }, 
  {
-  "codeAsylum": "862", 
+  "codeAsylum": 862, 
   "asylum": "Venezuela (Bolivarian Republic of)", 
   "2013": 203644.0, 
   "2012": 202022.0
  }, 
  {
   "2016": 1.0, 
-  "codeAsylum": "52", 
+  "codeAsylum": 52, 
   "2015": 1.0, 
   "2014": 1.0, 
   "asylum": "Barbados", 
@@ -2070,20 +2070,20 @@
  }, 
  {
   "2016": 506.0, 
-  "codeAsylum": "520", 
+  "codeAsylum": 520, 
   "2015": 389.0, 
   "2014": 0.0, 
   "asylum": "Nauru", 
   "2013": 0.0
  }, 
  {
-  "codeAsylum": "688", 
+  "codeAsylum": 688, 
   "asylum": "Serbia", 
   "2013": 66370.0
  }, 
  {
   "2016": 3.0, 
-  "codeAsylum": "90", 
+  "codeAsylum": 90, 
   "2015": 3.0, 
   "2014": 0.0, 
   "asylum": "Solomon Islands", 
@@ -2091,7 +2091,7 @@
  }, 
  {
   "2016": 0.0, 
-  "codeAsylum": "275", 
+  "codeAsylum": 275, 
   "2015": 0.0, 
   "2014": 0.0, 
   "asylum": "State of Palestine", 
@@ -2099,7 +2099,7 @@
  }, 
  {
   "2016": 4.0, 
-  "codeAsylum": "796", 
+  "codeAsylum": 796, 
   "2015": 4.0, 
   "2014": 4.0, 
   "asylum": "Turks and Caicos Islands", 
@@ -2110,25 +2110,25 @@
   "2014": 0.0, 
   "asylum": "Cape Verde", 
   "2016": 0.0, 
-  "codeAsylum": "132"
+  "codeAsylum": 132
  }, 
  {
   "2015": 37.0, 
   "2014": 15.0, 
   "asylum": "Curaao", 
   "2016": 44.0, 
-  "codeAsylum": "531"
+  "codeAsylum": 531
  }, 
  {
   "2015": 3.0, 
   "2014": 3.0, 
   "asylum": "Sint Maarten (Dutch part)", 
   "2016": 3.0, 
-  "codeAsylum": "534"
+  "codeAsylum": 534
  }, 
  {
   "2015": 54842.0, 
-  "codeAsylum": "178", 
+  "codeAsylum": 178, 
   "asylum": "Congo", 
   "2016": 61492.0
  }

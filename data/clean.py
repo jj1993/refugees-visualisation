@@ -67,7 +67,7 @@ def giveIso(f):
         
         for e in d:
             if asylum == e[1]:
-                line["codeAsylum"] = e[0]
+                line["codeAsylum"] = int(e[0])
                 break
         else:
             if asylum != None:
@@ -75,7 +75,7 @@ def giveIso(f):
             
         for e in d:
             if origin == e[1]:
-                line["codeOrigin"] = e[0]
+                line["codeOrigin"] = int(e[0])
                 break
         else:
             if origin != None:

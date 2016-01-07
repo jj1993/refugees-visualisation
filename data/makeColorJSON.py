@@ -21,13 +21,16 @@ def makeDict(filename):
                     e = ''.join(i for i in e if not i.isdigit())
                     e = e.decode('ascii', errors='replace')
                 else:
-                    if not e.strip(" ").isdigit(): e = 0
-                    e = str(e).replace('.', '')
-                    e = float(e.replace(',','.'))
+                    if y == "2010":
+                        try: e = float(e.replace(",",""))
+                        except: e = 0.0
+                    else:
+                        try: e = float(e.strip(".").replace(",","."))
+                        except: e = 0.0
                 t.append(e)
         if len(t) > 0:
             d = {}
-            d["origin"], d["gdp"+y], d["inhibitans"+y], d["km2"+y], d["gdp-rank"+y], d["inhibitans-rank"+y], d["km2-rank"+y] = t
+            d["origin"], d["gdp"+y], d["inhibitans"+y], d["km2"+y], d["gdprank"+y], d["inhibitansrank"+y], d["km2rank"+y] = t
             l.append(d)
             
     return l

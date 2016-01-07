@@ -20,3 +20,9 @@ verschillende landen op elk moment. Ook is er aan alle datapunten met landenname
 
 Dit bleek veel tijd te kosten omdat de landen in de tabellen telkens net andere punktuatie ect bleken te hebben. Uiteindelijk is het
 wel gelukt om de data op te schonen.
+
+#Dag 4, 7 januari
+
+Vandaag heb ik met een bootstrap template een prototype van mijn visualisatie opgezet. Ook heb ik geprobeerd data in de landkaart in
+te lezen. Dit lukte niet, het probleem lijkt te zijn dat ik geen keys kan aanroepen in javascript waar getallen in staan. Ook heb ik
+geprobeerd een schuifbalk in te voegen in de HTML. Dit is gelukt, maar om onbekende reden kan ik deze niet bewegen.
