@@ -26,3 +26,10 @@ wel gelukt om de data op te schonen.
 Vandaag heb ik met een bootstrap template een prototype van mijn visualisatie opgezet. Ook heb ik geprobeerd data in de landkaart in
 te lezen. Dit lukte niet, het probleem lijkt te zijn dat ik geen keys kan aanroepen in javascript waar getallen in staan. Ook heb ik
 geprobeerd een schuifbalk in te voegen in de HTML. Dit is gelukt, maar om onbekende reden kan ik deze niet bewegen.
+
+#Dag 5, 8 januari
+
+De bootstrap template is verder uitgewerkt en opgeschoond. Er zitten nu geen overbodige jquery's ed. meer in. De wereldkaart is gekleurd
+en de getallen van het totale aantal vluchtelingen wordt weergegeven. De data van alle jaren en 3 verschillende types kan nu ingelezen
+worden. De volgende stap is om de weergave te koppelen aan het aangevraagde jaar met de slider-bar. Het design-document is opgesteld en 
+ingeleverd.

@@ -1,4 +1,4 @@
-# Process book
+# Design Document
 *Jonathan Jeroen Beekman*
 *10345019*
 
@@ -17,7 +17,7 @@ Deze data wordt doorgestuurd naar een functie drawMap() als alles ingeladen is.
 * In drawMap() laat ik ook alle visualisaties en grafieken getekent worden. Mogelijk kan ik in drawMap() zelf 
 een queue implementeren die een laadbalk over de SVG heen plaats tot de visualisatie geladen is.
 
-**In drawMap():**
+*In drawMap():*
 * De wereldkaart wordt ingetekend via D3. Hierbij worden alle path's die met een land corresponderen 
 apart aangeroepen en op de juiste manier gekleurd volgens de huidige datum. De path-objecten krijgen hun
 ISO-landcode als data mee.
@@ -36,7 +36,7 @@ die het land zal krijgen (getColor(ISO code *float*, jaar *string* en type *stri
 * Hierbij word het land gekleurd in de correcte kleur en een text-element geplaatst met het aantal vluchtelingen in het 
 betreffende land op het jaar waarop de visualisatie wordt geinitialiseerd
 
-'Tot hier is de visualisatie werkzaam! (Jonathan, 8 januari)'
+>Tot hier is de visualisatie werkzaam! (Jonathan, 8 januari)
 
 * De vluchtelingenstromen per land worden voor elk jaar als objecten over de svg heengelegd 
 (drawFlow(origin *string*, asylum *string*, amount *float*) en onzichtbaar gemaakt. De stromen worden weer 
@@ -45,12 +45,12 @@ zichtbaar bij een hover-event.
 getekend (drawPopup(totaal asielaanvragen *lijst*, herkomst asielzoekers *lijst van lijsten*)) en onzichtbaar gemaakt. 
 De popup wordt zichtbaar bij het zelfde event als de vluchtelingenstromen.
 
-**Event: mouse hover over een land**
+*Event: mouse hover over een land*
 * De vluchtelingenstromen en pop up worden zichtbaargemaakt. Alle andere stromen en popups worden onzichtbaar gemaakt.
 * Het gehoverde land en de landen waar asielzoekers vandaan komen worden wit
 * De witte landen geven het totale aantal asielzoekers weer als tekst. Alle andere tekst-objecten worden onzichtbaar.
 
-**Event: slider-bar die het jaar aangeeft wordt verschoven**
+*Event: slider-bar die het jaar aangeeft wordt verschoven*
 * De kleuren (fill) van de path-elementen wordt geupdate
 * De inhoud van de tekst-elementen met het totale aantal asielzoekers wordt geupdate
 * Alle zichtbare popups, tekstvakken, en asielstromen worden onzichtbaar gemaakt tot het volgende hover-event

@@ -39,31 +39,6 @@ function drawMap(error, data){
  			.attr("id", function(d){return d.id})
  			.attr("d", path)[0];
 
- 	function getCentre(country) {
- 		var bbox = country.getBBox();
- 		return [bbox.x + bbox.width/2, bbox.y + bbox.height/2];
- 	}
-
- 	function getTotal(c, y) {
-		for (n = 0; n < total.length; n++) {
-	 		e = total[n];
-	    	if (c == e.codeAsylum && e[y] != undefined) {
-				return e[y];
-			}
-		}
-		return undefined;
-	}
-
-	function getColor(c, y, t) {
-		for (n = 0; n < colorValues.length; n++) {
-			e = colorValues[n]
-			if (c == e.codeOrigin && e[t+y] != undefined) {
-				return e[t+y];
-			}
-		}
-		return undefined;
-	}
-
  	function getCountryData(countries) {
  		var l = [];
  		var year = '2015';
@@ -99,6 +74,39 @@ function drawMap(error, data){
 		d3.select(this).attr("style", "fill: "+scaleToColor(countryData[i][2]));
 	})
 
+}
+
+function getCentre(country) {
+	var bbox = country.getBBox();
+	return [bbox.x + bbox.width/2, bbox.y + bbox.height/2];
+}
+
+function getTotal(c, y) {
+for (n = 0; n < total.length; n++) {
+		e = total[n];
+	if (c == e.codeAsylum && e[y] != undefined) {
+		return e[y];
+	}
+}
+return undefined;
+}
+
+function getColor(c, y, t) {
+	for (n = 0; n < colorValues.length; n++) {
+		e = colorValues[n]
+		if (c == e.codeOrigin && e[t+y] != undefined) {
+			return e[t+y];
+		}
+	}
+	return undefined;
+}
+
+function getFlows(c, y) {
+	return
+}
+
+function drawFlow(asylum, origin, amount) {
+	return
 }
  	
  	// // add crators on svg
