@@ -24,8 +24,8 @@ function drawMap(error, data){
 
 	// initialise projection of the map
 	var projection = d3.geo.mercator()
-					.scale(400)
-					.translate([width / 3, height*1.2]);
+					.scale(300)
+					.translate([width / 3, height*15]);
 
 	// initialise path builder
 	var path = d3.geo.path()
@@ -51,7 +51,7 @@ function drawMap(error, data){
 				return e[y];
 			}
 		}
-		return 0;
+		return undefined;
 	}
 
 	function getColor(c, y, t) {
@@ -61,7 +61,7 @@ function drawMap(error, data){
 				return e[t+y];
 			}
 		}
-		return 0;
+		return undefined;
 	}
 
  	function getCountryData(countries) {
