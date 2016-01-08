@@ -1,5 +1,3 @@
-STARTYEAR = 2013;
-
 window.onload = function() {
 
 	// build queue to load in data
@@ -18,7 +16,7 @@ function drawMap(error, data){
 	var total = data[3];
 	
 	// build svg element to hold map
-	var width = screen.width
+	var width = document.getElementById('map').offsetWidth
 	var height = 0.7*screen.height
 	var svg = d3.select("#map").append("svg")
  			.attr("width", width)
@@ -26,45 +24,82 @@ function drawMap(error, data){
 
 	// initialise projection of the map
 	var projection = d3.geo.mercator()
-					.scale(500)
-					.translate([width / 3, height*1.5]);
+					.scale(400)
+					.translate([width / 3, height*1.2]);
 
 	// initialise path builder
 	var path = d3.geo.path()
 				.projection(projection);
 
 	// draw all landmaps one by one
- 	svg.selectAll(".land")
- 		.data(topojson.feature(mapData, mapData.objects.countries).features)
- 		.enter().append("path")
- 			.attr("class", function(d){return "land "+d.id})
- 			.attr("d", path)
- 			.attr("innerHTML", function(d){
- 				code = d.id
-		 		for (i = 0; i < total.length; i++) {
-		 			e = total[i];
-		    		if (code == e.codeAsylum) {
-		    			console.log(e[2]);
-		    		}
-		    	}
- 			});
+ 	countries = svg.selectAll(".country")
+ 			.data(topojson.feature(mapData, mapData.objects.countries).features).enter()
+ 		.append("path")
+ 			.attr("class", "country")
+ 			.attr("id", function(d){return d.id})
+ 			.attr("d", path)[0];
 
- 	// d3.selectAll("path").attr("style", function(d) {
- 	// 	var code = d.id
- 	// 	for (i = 0; i < colorValues.length; i++) {
- 	// 		e = colorValues[i];
-  //   		if (code == e.codeOrigin) {
-  //   			console.log(e);
-  //   		}
-    		
-		// }
- 	// })
+ 	function getCentre(country) {
+ 		var bbox = country.getBBox();
+ 		return [bbox.x + bbox.width/2, bbox.y + bbox.height/2];
+ 	}
 
- 	// // build scale for crators
- 	// var domain = d3.extent(fireballs, function(d){return +d.Impact})
- 	// var scale_impact = d3.scale.log()
- 	// 					.range([1,7])
- 	// 					.domain(domain);
+ 	function getTotal(c, y) {
+		for (n = 0; n < total.length; n++) {
+	 		e = total[n];
+	    	if (c == e.codeAsylum && e[y] != undefined) {
+				return e[y];
+			}
+		}
+		return 0;
+	}
+
+	function getColor(c, y, t) {
+		for (n = 0; n < colorValues.length; n++) {
+			e = colorValues[n]
+			if (c == e.codeOrigin && e[t+y] != undefined) {
+				return e[t+y];
+			}
+		}
+		return 0;
+	}
+
+ 	function getCountryData(countries) {
+ 		var l = [];
+ 		var year = '2015';
+ 		colorType = 'inhibitans';
+
+ 		for (i = 0; i < countries.length; i++) {
+ 			country = countries[i];
+ 			code = country.id;
+ 			centre = getCentre(country);
+ 			totalAsylum = getTotal(code, year);
+ 			colorValue = getColor(code, year, colorType);
+ 			l.push([centre, totalAsylum, colorValue]);
+ 		}
+ 		return l
+ 	}
+
+ 	var countryData = getCountryData(countries)
+
+	// build scale for colors
+	var domain = d3.extent(countryData, function(d){return d[2]})
+	var scaleToColor = d3.scale.linear().domain([domain[0],15]).range(["green","red"]);
+
+ 	var asylumText = svg.selectAll(".totalAsylum")
+				 			.data(countryData).enter()
+				 		.append("text")
+				 			.attr("class","totalAsylum")
+				 			.attr("text-anchor", "middle")
+				 			.attr("x", function(d) {return d[0][0]})
+				 			.attr("y", function(d) {return d[0][1]})
+							.text(function(d) {return d[1]});
+
+	svg.selectAll(".country").each(function(d, i) {
+		d3.select(this).attr("style", "fill: "+scaleToColor(countryData[i][2]));
+	})
+
+}
  	
  	// // add crators on svg
  	// svg.selectAll(".crater")
@@ -107,7 +142,6 @@ function drawMap(error, data){
 // 			.text(function(d){return (+d).toFixed(2)})
 // 			.attr("x", 70)
 // 			.attr("y", function(d, i){return 44 + i * 40;});
-}
 
 
 

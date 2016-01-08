@@ -25,10 +25,6 @@
 
     <link href="css/map.css" rel="stylesheet">
 
-
-    <!-- Custom Responsive stylesheet -->
-    <link href="css/responsive.css" rel="stylesheet">
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -65,27 +61,15 @@
       <div class="navigation">
         <div id="main-nav" class="navbar navbar-default" role="navigation">
           <div class="container">
-
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="">Menu</a>
-            </div> <!-- end .navbar-header -->
-
             <div class="navbar-collapse collapse">
               <ul id="ulnav" class="nav navbar-nav navbar-right">
                 <li class="active"><a href="#top">Home</a></li>
-                <li><a href="#features">Vluchtelingen per 1000 inwoners</a></li>
-                <li><a href="#features">Vluchtelingen per GDP</a></li>
-                <li><a href="#features">Vluchtelingen per 1000km<sup>2</sup></a></li>
+                <li><a href="#slider">Vluchtelingen per 1000 inwoners</a></li>
+                <li><a href="#slider">Vluchtelingen per GDP</a></li>
+                <li><a href="#slider">Vluchtelingen per 1000km<sup>2</sup></a></li>
                 <li><a href="http://www.unhcr.org/statistics/">UNHCR Statistieken</a></li>
               </ul>
             </div><!-- end .navbar-collapse -->
-
           </div> <!-- end .container -->
         </div> <!-- end #main-nav -->
       </div> <!-- end .navigation -->
@@ -107,9 +91,13 @@
           </div> <!-- end .container> .header -->
 
           <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-2">
               <p>
-                <b>Jaar</b> 
+                <b>Datum</b> 
+              </p>
+            </div>
+            <div class="col-lg-10" id="slider">
+              <p>
                 <input id="slider" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="1" size="100"/>
               </p>
             </div>
