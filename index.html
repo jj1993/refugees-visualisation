@@ -91,15 +91,14 @@
           </div> <!-- end .container> .header -->
 
           <div class="row">
-            <div class="col-lg-2">
-              <p>
-                <b>Datum</b> 
+            <div class="col-lg-2" id="date">
+              <p id="monthyear">
               </p>
             </div>
-            <div class="col-lg-10" id="slider">
-              <p>
-                <input id="slider" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="1" size="100"/>
-              </p>
+            <div class="col-lg-10" id="slider-col">
+              <div id="slider">
+                <div id="slider-scrub" class="ui-widget-content">•</div>
+              </div>
             </div>
           </div>
           <div class="row">
@@ -130,13 +129,6 @@
 
     <!-- Bootstrap 3.2.0 js -->
     <script src="js/bootstrap.min.js"></script>
-
-    <!-- Slider plugin -->
-    <script src="js/bootstrap-slider.js"></script>
-
-    <!-- Worldmap -->
-    <script src="js/map.js"></script>
-
     <!-- Queue -->
     <script src="js/queue.js"></script>
 
@@ -161,9 +153,16 @@
     <!-- jQuery One Page Nav Plugin -->
     <script src="js/jquery.nav.js"></script>
 
+    <script src="js/jquery-ui.js"></script>
 
     <!-- Custom JS -->
     <script src="js/main.js"></script>
+
+    <!-- Slider plugin -->
+    <script src="js/slider.js"></script>
+
+    <!-- Worldmap -->
+    <script src="js/map.js"></script>
 
   </body>
 </html>

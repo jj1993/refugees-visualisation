@@ -5,27 +5,38 @@ window.onload = function() {
  	q.defer(d3.json, "./data/world-50m.json");
  	q.defer(d3.json, "./data/refugees.json");
  	q.defer(d3.json, "./data/colorvalues.json");
- 	q.defer(d3.json, "./data/total.json")
- 	q.awaitAll(drawMap);
+ 	q.defer(d3.json, "./data/total.json");
+ 	q.awaitAll(initiateMap);
 }
+
 // Draws a map with the crators in the dataset
-function drawMap(error, data){
-	var mapData = data[0];
-	var refugees = data[1];
-	var colorValues = data[2];
-	var total = data[3];
+function initiateMap(error, data){
+	// Build scale for slider
+	var slider = d3.select("#slider-scrub").node().getBoundingClientRect();
+	var bar = d3.select("#slider").node().getBoundingClientRect();
+	var domain = [slider.width, bar.width];
+	day = d3.time.format("%Y-%m-%d");
+	var range = [day.parse("2010-01-01"), day.parse("2015-06-30")];
+	scaleToDate = d3.scale.linear().domain(domain).range(range);
+	monthNameFormat = d3.time.format("%B");
+
+	mapData = data[0];
+	refugees = data[1];
+	colorValues = data[2];
+	total = data[3];
+
 	
 	// build svg element to hold map
 	var width = document.getElementById('map').offsetWidth
 	var height = 0.7*screen.height
-	var svg = d3.select("#map").append("svg")
+	svg = d3.select("#map").append("svg")
  			.attr("width", width)
  			.attr("height", height);
 
 	// initialise projection of the map
 	var projection = d3.geo.mercator()
-					.scale(300)
-					.translate([width / 3, height*15]);
+					.scale(400)
+					.translate([width / 3, height*1.2]);
 
 	// initialise path builder
 	var path = d3.geo.path()
@@ -39,27 +50,17 @@ function drawMap(error, data){
  			.attr("id", function(d){return d.id})
  			.attr("d", path)[0];
 
- 	function getCountryData(countries) {
- 		var l = [];
- 		var year = '2015';
- 		colorType = 'inhibitans';
+	var date = new Date(scaleToDate(35));
+	var year = date.getFullYear();
+	d3.select("#monthyear").text(monthNameFormat(date) + " " + year);
+	var countryData = getCountryData(countries, year);
+	drawMap(year, countryData);
+}
 
- 		for (i = 0; i < countries.length; i++) {
- 			country = countries[i];
- 			code = country.id;
- 			centre = getCentre(country);
- 			totalAsylum = getTotal(code, year);
- 			colorValue = getColor(code, year, colorType);
- 			l.push([centre, totalAsylum, colorValue]);
- 		}
- 		return l
- 	}
-
- 	var countryData = getCountryData(countries)
-
+function drawMap(year, countryData) {
 	// build scale for colors
 	var domain = d3.extent(countryData, function(d){return d[2]})
-	var scaleToColor = d3.scale.linear().domain([domain[0],15]).range(["green","red"]);
+	var scaleToColor = d3.scale.linear().domain([domain[0],15]).range(["#deebf7","#3182bd"]);
 
  	var asylumText = svg.selectAll(".totalAsylum")
 				 			.data(countryData).enter()
@@ -73,7 +74,15 @@ function drawMap(error, data){
 	svg.selectAll(".country").each(function(d, i) {
 		d3.select(this).attr("style", "fill: "+scaleToColor(countryData[i][2]));
 	})
+}
 
+function update(n) {
+	var date = new Date(scaleToDate(n));
+	d3.select("#monthyear").text(monthNameFormat(date) + " " + date.getFullYear());
+	var year = date.getFullYear();
+	var countryData = getCountryData(countries, year);
+	svg.selectAll(".totalAsylum").remove();
+	drawMap(year, countryData);
 }
 
 function getCentre(country) {
@@ -82,13 +91,13 @@ function getCentre(country) {
 }
 
 function getTotal(c, y) {
-for (n = 0; n < total.length; n++) {
-		e = total[n];
-	if (c == e.codeAsylum && e[y] != undefined) {
-		return e[y];
+	for (n = 0; n < total.length; n++) {
+			e = total[n];
+		if (c == e.codeAsylum && e[y] != undefined) {
+			return e[y];
+		}
 	}
-}
-return undefined;
+	return undefined;
 }
 
 function getColor(c, y, t) {
@@ -101,14 +110,21 @@ function getColor(c, y, t) {
 	return undefined;
 }
 
-function getFlows(c, y) {
-	return
+function getCountryData(countries, year) {
+	var l = [];
+	colorType = 'inhibitans';
+
+	for (i = 0; i < countries.length; i++) {
+		country = countries[i];
+		code = country.id;
+		centre = getCentre(country);
+		totalAsylum = getTotal(code, year);
+		colorValue = getColor(code, year, colorType);
+		l.push([centre, totalAsylum, colorValue]);
+	}
+	return l
 }
 
-function drawFlow(asylum, origin, amount) {
-	return
-}
- 	
  	// // add crators on svg
  	// svg.selectAll(".crater")
  	// 	.data(fireballs)
@@ -150,10 +166,3 @@ function drawFlow(asylum, origin, amount) {
 // 			.text(function(d){return (+d).toFixed(2)})
 // 			.attr("x", 70)
 // 			.attr("y", function(d, i){return 44 + i * 40;});
-
-
-
-// // returns the data used for the legenda
-// function getLegendaData(domain){
-// 	return [0.1, 1, 10, 100, domain[1]]
-// }

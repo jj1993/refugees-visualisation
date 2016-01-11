@@ -24,9 +24,3 @@ $(document).ready(function(){
   $('#testimonial').parallax("50%", 0.4);
   $('#download').parallax("50%", 0.4);
 })
-
-$('#slider').slider({
-  formatter: function(value) {
-    return 'Current value: ' + value;
-  }
-});

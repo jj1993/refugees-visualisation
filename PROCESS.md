@@ -33,3 +33,9 @@ De bootstrap template is verder uitgewerkt en opgeschoond. Er zitten nu geen ove
 en de getallen van het totale aantal vluchtelingen wordt weergegeven. De data van alle jaren en 3 verschillende types kan nu ingelezen
 worden. De volgende stap is om de weergave te koppelen aan het aangevraagde jaar met de slider-bar. Het design-document is opgesteld en 
 ingeleverd.
+
+#Dag 6, 11 januari
+
+Ik heb een slider bar ingevoegd waarmee de datum kan worden aangepast. De locatie van de slider bar wordt geupdate als deze wordt 
+verschoven. De x-positie wordt via een d3-scale omgezet in een datum en van deze datum wordt het jaar opgevraagt. De data op de wereldkaart
+wordt geupdate naar de data van het betreffende jaar. De kaart wordt ook geupdate al de bar nog aan het verschuiven is.
