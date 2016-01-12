@@ -39,3 +39,13 @@ ingeleverd.
 Ik heb een slider bar ingevoegd waarmee de datum kan worden aangepast. De locatie van de slider bar wordt geupdate als deze wordt 
 verschoven. De x-positie wordt via een d3-scale omgezet in een datum en van deze datum wordt het jaar opgevraagt. De data op de wereldkaart
 wordt geupdate naar de data van het betreffende jaar. De kaart wordt ook geupdate al de bar nog aan het verschuiven is.
+
+#Dag 7, 12 januari
+
+Nu is ook de data van de vluchtelingenstromen aan de DOM-elementen van de landen gekoppeld. Bovendien is de dat van elk jaar gekoppeld.
+De lokatie van de landen bepalen blijkt nog een probleem te zijn. Aangezien de herkostlanden van de vluchtelingen de te bepalen locaties
+zijn, en deze vaak uit één stuk land bestaan, gaat het bepalen van de lokatie hier wel goed. Ik laat het dus nog even voor wat het is.
+
+Door op de landen te klikken wordt er nu een functie aangeroepen die de locatie van de muis (op het moment van klikken) bepaald, de locatie
+van de landen waar vluchtelingen dat jaar vandaan kwamen en het aantal vluchtelingen op deze route. Morgen ga ik hier lijnen tussen proberen
+te trekken.
