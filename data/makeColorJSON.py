@@ -23,10 +23,10 @@ def makeDict(filename):
                 else:
                     if y == "2010":
                         try: e = float(e.replace(",",""))
-                        except: e = 0.0
+                        except: e = "NaN"
                     else:
                         try: e = float(e.strip(".").replace(",","."))
-                        except: e = 0.0
+                        except: e = "NaN"
                 t.append(e)
         if len(t) > 0:
             d = {}

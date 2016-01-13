@@ -61,13 +61,13 @@
       <div class="navigation">
         <div id="main-nav" class="navbar navbar-default" role="navigation">
           <div class="container">
-            <div class="navbar-collapse collapse">
-              <ul id="ulnav" class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#top">Home</a></li>
-                <li><a href="#slider">Vluchtelingen per 1000 inwoners</a></li>
-                <li><a href="#slider">Vluchtelingen per GDP</a></li>
-                <li><a href="#slider">Vluchtelingen per 1000km<sup>2</sup></a></li>
-                <li><a href="http://www.unhcr.org/statistics/">UNHCR Statistieken</a></li>
+            <div class="navbar-collapse collapse navbar-right">
+              <ul id="ulnav" class="nav navbar-nav">
+                <li><a href="#top">Home</a></li>
+                <li><a href="#date" id="inhibitants">Vluchtelingen per 1000 inwoners</a></li>
+                <li><a href="#date" id="gdp">Vluchtelingen per GDP</a></li>
+                <li><a href="#date" id="km2">Vluchtelingen per 1000km<sup>2</sup></a></li>
+                <!-- <li><a href="http://www.unhcr.org/statistics/">UNHCR Statistieken</a></li> -->
               </ul>
             </div><!-- end .navbar-collapse -->
           </div> <!-- end .container -->
@@ -155,14 +155,11 @@
 
     <script src="js/jquery-ui.js"></script>
 
-    <!-- Custom JS -->
-    <script src="js/main.js"></script>
-
     <!-- Slider plugin -->
     <script src="js/slider.js"></script>
 
-    <!-- Worldmap -->
-    <script src="js/map.js"></script>
+    <!-- Custom javascript with worldmap -->
+    <script src="js/main.js"></script>
 
   </body>
 </html>
