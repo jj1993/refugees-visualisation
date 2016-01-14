@@ -289,18 +289,25 @@ function drawLines(d, pos) {
 }
 
 function drawInfo(d, pos) {
-	var xOffset = -50;
-	var yOffset = -20;
+	var xOffset = -300;
+	var yOffset = -150;
+	var x = pos[0]+xOffset;
+	var y = pos[1]+yOffset;
+	if (x < 0) {x = 0};
+	if (y < 0) {y = 0};
 	var graph = document.createElement("div");
 	document.getElementById("map").appendChild(graph);
 	graph.style.position = "absolute";
-	graph.style.left = pos[0]+xOffset+'px';
-	graph.style.top = pos[1]+yOffset+'px';
-	graph.setAttribute("class", "graph")
+	graph.style.left = x + 'px';
+	graph.style.top = y + 'px';
+	graph.style.padding = "15px";
+	graph.setAttribute("class", "graph");
+
+	console.log(pos)
 
 	var graphSVG = d3.select(".graph").append("svg")
-						.attr("width", 100)
-						.attr("height", 50);
+						.attr("width", 250)
+						.attr("height", 100);
 
 	var keys = Object.keys(d)
 	var data = []
@@ -341,9 +348,6 @@ function drawGraph(data, svg) {
     x.domain(d3.extent(data, function(d) { return d.date; }));
     y.domain([0, d3.max(data, function(d) { return d.amount; })]);
 
-    console.log(d3.extent(data, function(d) { return d.date; }));
-    console.log([0, d3.max(data, function(d) { return d.amount; })]);
-    console.log(data)
     // Add the valueline path.
     svg.append("path")
         .attr("class", "graphline")

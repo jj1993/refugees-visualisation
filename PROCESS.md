@@ -60,3 +60,10 @@ is de laptop opnieuw opgestart, enz. Kortom, alles geprobeerd, uiteindelijk het 
 
 https://github.com/jj1993/vluchtelingen-in-europa
 
+#Dag 9, 14 januari
+
+Ik ben weer terug naar mijn oude repository. Alles lijkt weer te werken. Nu komt er bij het klikken op een land ook een popup omhoog die 
+de ontwikkeling van het aantal vluchtelingen over de jaren heen weergeeft. Met de data van Duitsland lijkt nog iets mis te zijn. 
+Niet alle landen hebben data, wat kan zorgen voor een error bij het klikken op een land. Alleen een goede legenda ontbreekt nog van de
+minimum viable product, zoals beschreven in het design document.
+
