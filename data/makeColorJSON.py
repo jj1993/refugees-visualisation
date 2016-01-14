@@ -2,7 +2,7 @@ import json
 
 FILES = ['2010color.csv', '2011color.csv', '2012color.csv',
          '2013color.csv' ,'2014color.csv', '2015color.csv']
-OUTPUTFILE = 'colorvalues.json'
+OUTPUTFILE = 'colorvalues2.json'
             
 def makeDict(filename):
     """

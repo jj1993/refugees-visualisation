@@ -49,3 +49,14 @@ zijn, en deze vaak uit één stuk land bestaan, gaat het bepalen van de lokatie 
 Door op de landen te klikken wordt er nu een functie aangeroepen die de locatie van de muis (op het moment van klikken) bepaald, de locatie
 van de landen waar vluchtelingen dat jaar vandaan kwamen en het aantal vluchtelingen op deze route. Morgen ga ik hier lijnen tussen proberen
 te trekken.
+
+#Dag 8, 13 januari
+
+De gekoppelde data wordt bij het klikken op een land nu omgezet in visuele lijnen. Hun dikte wordt kwadratisch geschaald naar aantal
+vluchtelingen. Ik had vandaag veel problemen met een 'ghost-file'. Ik had een databestand verwijderd, maar de javascript file bleef het
+zelfde bestand lezen. Later kon ik opgeslagen wijzigingen in de javascript ook niet meer uitvoeren, de server bleef zich gedragen
+alsof er een oudere versie is ingeladen. Met de begeleiding is uitgesloten dat er ergens naar een verkeerde locatie verwezen werd, ook
+is de laptop opnieuw opgestart, enz. Kortom, alles geprobeerd, uiteindelijk het probleem opgelost door naar een nieuwe git-repository te verhuizen
+
+https://github.com/jj1993/vluchtelingen-in-europa
+

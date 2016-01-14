@@ -1,6 +1,6 @@
 import json
 
-FILES = ['total.json', 'colorvalues.json',  'refugees.json'] 
+FILES = ['total.json', 'colorvalues2.json',  'refugees.json'] 
 ISO = "iso.json"
 
 

@@ -2,14 +2,46 @@ YEARS = {"2010":"2010-01-01", "2011":"2011-01-01", "2012":"2012-01-01","2013":"2
 TYPES = ["inhibitans", "gdp", "km2"];
 STARTDATE = YEARS["2010"];
 
+jQuery(window).bind('scroll', function (){
+  if (jQuery(window).scrollTop() > 700){
+    jQuery('#main-nav').addClass('navbar-fixed-top');
+  } else {
+    jQuery('#main-nav').removeClass('navbar-fixed-top');
+  }
+});
+
+jQuery(document).ready(function($) {
+  "use strict";
+  $('#main-nav').onePageNav({
+    currentClass: 'active',
+    scrollOffset: 69,
+  });  
+});
+
+$(document).ready(function(){
+  //inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+  $('#top').parallax("50%", 0.1);
+  $('#inhibitants').bind("click", function () { 
+  	type = TYPES[0];
+  	});
+  $('#gdp').bind("click", function () { 
+  	type = TYPES[1];
+  	update($('#slider-scrub').position().left); 
+  });
+  $('#km2').bind("click", function () { 
+  	type = TYPES[2];
+  	update($('#slider-scrub').position().left);
+  });
+})
+
 window.onload = function() {
 	// build queue to load in data
  	var q = queue(1);
- 	q.defer(d3.json, "./data/world-50m.json");
- 	q.defer(d3.json, "./data/refugees.json");
- 	q.defer(d3.json, "./data/colorvalues.json");
- 	q.defer(d3.json, "./data/total.json");
- 	q.defer(d3.json, "./data/centres.json")
+ 	q.defer(d3.json, "../data/world-50m.json");
+ 	q.defer(d3.json, "../data/refugees.json");
+ 	q.defer(d3.json, "../data/total.json");
+ 	q.defer(d3.json, "../data/colorvalues.json");
+ 	q.defer(d3.json, "../data/centres.json")
  	q.awaitAll(initiateMap);
 }
 
@@ -22,16 +54,18 @@ function initiateMap(error, data){
 	day = d3.time.format("%Y-%m-%d");
 	var range = [day.parse(YEARS["2010"]), day.parse(YEARS["2016"])];
 	scaleToDate = d3.scale.linear().domain(domain).range(range);
+	scaleToLine = d3.scale.linear().domain([0, Math.sqrt(50000)]).range([0, 6]);
 	monthNameFormat = d3.time.format("%B");
 
+	// starting variables are defined
 	mapData = data[0];
 	refugees = data[1];
-	colorValues = data[2];
-	total = data[3];
+	colorValues = data[3];
+	total = data[2];
 	countryCentres = data[4];
 
 	var startDate = new Date(day.parse(STARTDATE));
-	var year = startDate.getFullYear();
+	year = startDate.getFullYear();
 	type = TYPES[2];
 
 	// build svg element to hold map
@@ -50,14 +84,6 @@ function initiateMap(error, data){
 	var path = d3.geo.path()
 				.projection(projection);
 
- 	// data is sorted in the sequence of the countries
-	var geometries = mapData.objects.countries.geometries;
-	var idArr = [];
-	for (var i=0; i<geometries.length; i++) {
-		idArr.push(geometries[i].id);
-	}
-	countryData = getCountryData(idArr);
-	console.log(countryData)
 	// draw all landmaps one by one, id's are added
  	svg.selectAll(".country")
  			.data(topojson.feature(mapData, mapData.objects.countries).features).enter()
@@ -66,25 +92,45 @@ function initiateMap(error, data){
  			.attr("id", function(d){return d.id})
  			.attr("d", path);
 
- 	// the data-to-visualise is bound to the countries
- 	svg.selectAll(".country").data(countryData)
- 	svg.selectAll(".country").on("click", function(d) {var pos = d3.mouse(this); drawLines(d, pos)});
+ 	// data is sorted in the sequence of the countries
 	countryDict = {}
- 	svg.selectAll(".country").each(function(d) {countryDict[this.id] = d});
+	var geometries = mapData.objects.countries.geometries;
+	var idArr = [];
+ 	svg.selectAll(".country").each(function(d) {countryDict[this.id] = this});
+	for (var i=0; i<geometries.length; i++) {
+		idArr.push(geometries[i].id);
+	}
+	countryData = getCountryData(idArr);
 
- 	console.log(countryDict)
+ 	// the data-to-visualise is bound to the countries and
+ 	// countryDict is overwritten
+ 	svg.selectAll(".country").data(countryData).each(function(d) {countryDict[this.id] = d});
 
-	// textblocks on the location of countries are initiated
-	// and bound to data-to-visualise
- 	svg.selectAll(".totalAsylum")
- 			.data(countryData).enter()
- 		.append("text")
- 			.attr("class","totalAsylum")
- 			.attr("text-anchor", "middle")
- 			.attr("x", function(d, i) {return d[year][4][0]})
- 			.attr("y", function(d, i) {return d[year][4][1]});
+	// // textblocks on the location of countries are initiated
+	// // and bound to data-to-visualise
+ // 	svg.selectAll(".totalAsylum")
+ // 			.data(countryData).enter()
+ // 		.append("text")
+ // 			.attr("class","totalAsylum")
+ // 			.attr("text-anchor", "middle")
+ // 			.attr("x", function(d) {return d[year][4][0]})
+ // 			.attr("y", function(d) {return d[year][4][1]});
 
+ 	// the implementation of the migration-flow-lines
+ 	svg.selectAll(".country").on("click", function(d) {
+ 		var pos = d3.mouse(this); 
+ 		$(".graph").remove();
+ 		drawLines(d, pos);
+ 		drawInfo(d, pos);
+ 	});
+ 	svg.selectAll(".country").on("mouseout", function() {
+ 		console.log("BAM")
+ 	});
+
+ 	// the date in the top of the visualisation is initiated
 	d3.select("#monthyear").text(monthNameFormat(startDate) + " " + year);
+
+	// the mapinfo is drawn
 	drawMap(year);
 }
 
@@ -114,6 +160,7 @@ function drawMap(year) {
 }
 
 function update(n) {
+	svg.selectAll(".line").remove()
 	var date = new Date(scaleToDate(n));
 	year = date.getFullYear();
 	d3.select("#monthyear").text(monthNameFormat(date) + " " + year);
@@ -175,13 +222,16 @@ function getName(c) {
 }
 
 function getCentre(c) {
+	var thispath = countryDict[c]
+	var bbox = thispath.getBBox();
+	return [bbox.x + bbox.width/2, bbox.y + bbox.height/2];
 	// for (var m = 0; m < countryCentres.length; m++) {
 	// 	var d = countryCentres[m];
 	// 	if (d.callingCodes[0] == c.toString()) {
-	// 		return path(d.latlng)
+	// 		return projection(d.latlng)
 	// 	}
 	// }
-	// return path([-2,30])
+	// return projection([-2,30])
 }
 
 function getCountryData(idArr) {
@@ -208,55 +258,111 @@ function getCountryData(idArr) {
 function drawLines(d, pos) {
 	svg.selectAll(".line").remove()
 	var data = d[year][2];
+	var sMax = 0;
+	var to = pos;
 
 	for (var n=0; n<data.length; n++) {
 		var d = data[n]
 		var thisd = countryDict[d[0]];
 		var from = thisd[year][4];
-		var to = pos;
 		var q = d[1];
+		var s = scaleToLine(Math.sqrt(q))
+		if (s > sMax) {sMax = s}
 		svg.append("line")
 			.attr("class", "line")
 			.attr("x1", from[0])
 			.attr("y1", from[1])
 			.attr("x2", to[0])
 			.attr("y2", to[1])
-			.attr("stroke-width", 2)
-			.attr("stroke", "black");
+			.attr("stroke-width", s);
+		svg.append("circle")
+			.attr("class", "line")
+			.attr("cx", from[0])
+			.attr("cy", from[1])
+			.attr("r", s/2);
 	}
+	svg.append("circle")
+		.attr("class", "line")
+		.attr("cx", to[0])
+		.attr("cy", to[1])
+		.attr("r", sMax/2);
 }
 
-jQuery(window).bind('scroll', function (){
-  if (jQuery(window).scrollTop() > 700){
-    jQuery('#main-nav').addClass('navbar-fixed-top');
-  } else {
-    jQuery('#main-nav').removeClass('navbar-fixed-top');
-  }
-});
+function drawInfo(d, pos) {
+	var xOffset = -50;
+	var yOffset = -20;
+	var graph = document.createElement("div");
+	document.getElementById("map").appendChild(graph);
+	graph.style.position = "absolute";
+	graph.style.left = pos[0]+xOffset+'px';
+	graph.style.top = pos[1]+yOffset+'px';
+	graph.setAttribute("class", "graph")
 
-jQuery(document).ready(function($) {
-  "use strict";
-  $('#main-nav').onePageNav({
-    currentClass: 'active',
-    scrollOffset: 69,
-  });  
-});
+	var graphSVG = d3.select(".graph").append("svg")
+						.attr("width", 100)
+						.attr("height", 50);
 
-$(document).ready(function(){
-  //inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
-  $('#top').parallax("50%", 0.1);
-  $('#inhibitants').bind("click", function () { 
-  	type = TYPES[0];
-  	});
-  $('#gdp').bind("click", function () { 
-  	type = TYPES[1];
-  	update($('#slider-scrub').position().left); 
-  });
-  $('#km2').bind("click", function () { 
-  	type = TYPES[2];
-  	update($('#slider-scrub').position().left);
-  });
-})
+	var keys = Object.keys(d)
+	var data = []
+	for (var i=0; i<keys.length; i++) {
+		var l = {}
+		var datum = new Date(day.parse(YEARS[keys[i]]))
+		l.date = datum
+		l.amount = d[keys[i]][0]
+		data.push(l)
+	}
+	
+	drawGraph(data, graphSVG);
+}
+
+function drawGraph(data, svg) {
+	// Code of simple graph from http://bl.ocks.org/d3noob/b3ff6ae1c120eea654b5
+
+	// Set the ranges
+	var width = parseInt(svg.style("width"));
+	var height = parseInt(svg.style("height"));
+	var x = d3.time.scale().range([0, width]);
+	var y = d3.scale.linear().range([height, 0]);
+	var t = Object.keys(data).length;
+
+	// Define the axes
+	var xAxis = d3.svg.axis().scale(x)
+	    .orient("bottom").ticks(t);
+
+	var yAxis = d3.svg.axis().scale(y)
+	    .orient("left").ticks(t);
+
+	// Define the line
+	var valueline = d3.svg.line()
+	    .x(function(d) { return x(d.date); })
+	    .y(function(d) { return y(d.amount); });
+
+    // Scale the range of the data
+    x.domain(d3.extent(data, function(d) { return d.date; }));
+    y.domain([0, d3.max(data, function(d) { return d.amount; })]);
+
+    console.log(d3.extent(data, function(d) { return d.date; }));
+    console.log([0, d3.max(data, function(d) { return d.amount; })]);
+    console.log(data)
+    // Add the valueline path.
+    svg.append("path")
+        .attr("class", "graphline")
+        .attr("d", valueline(data));
+
+    // Add the X Axis
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+
+    // Add the Y Axis
+    svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis);
+
+}
+
+
 
  	// // add crators on svg
  	// svg.selectAll(".crater")

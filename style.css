@@ -298,6 +298,34 @@ header {
 	border-radius: 0;
 }
 
+.line {
+	opacity: 0.8;
+	fill: #9e4848;
+	stroke: #9e4848;
+	pointer-events: none;
+}
+
+.graph {
+	pointer-events: none;
+	background: blue;
+	opacity: 0.85;
+	border-width: 1;
+	border-color: black;
+}
+
+.graph path { 
+    stroke: white;
+    stroke-width: 2;
+    fill: none;
+}
+
+.graph g {
+    fill: none;
+    stroke: white;
+    stroke-width: 1.5;
+    shape-rendering: crispEdges;
+}
+
 
 /* =========================================
    14. Section Copyright                 
