@@ -329,6 +329,18 @@ header {
     shape-rendering: crispEdges;
 }
 
+#leginf p {
+	text-align: center;
+}
+
+#legrow p {
+	text-align: right;
+}
+
+#legrow svg {
+	padding-top: 5px;
+}
+
 
 /* =========================================
    14. Section Copyright                 

@@ -70,7 +70,7 @@ function initiateMap(error, data){
 
 	// build svg element to hold map
 	var width = document.getElementById('map').offsetWidth
-	var height = 0.6*screen.height
+	var height = 0.5*screen.height
 	svg = d3.select("#map").append("svg")
  			.attr("width", width)
  			.attr("height", height);
