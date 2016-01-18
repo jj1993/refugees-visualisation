@@ -298,11 +298,17 @@ header {
 	border-radius: 0;
 }
 
+#map svg {
+    background-image: url("../images/backgr-pattern.png");
+    background-repeat: repeat;
+}
 .line {
-	opacity: 0.8;
-	fill: #9e4848;
-	stroke: #9e4848;
 	pointer-events: none;
+}
+
+#countryName {
+	pointer-events: none;
+	text-shadow: 1px 1px white;
 }
 
 .graph {
@@ -315,6 +321,19 @@ header {
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 }
+
+.graph text {
+    -moz-text-decoration-color: black; /* Code for Firefox */
+    text-decoration-color: black;
+    font-size: 10px;
+}
+
+.graph #graphName {
+	font-size: 15px;
+	position: absolute;
+	left: 30px;
+	top: 5px;
+}	
 
 .graph path { 
     stroke: steelblue;
@@ -329,6 +348,17 @@ header {
     shape-rendering: crispEdges;
 }
 
+#legrow svg {
+	padding-top: 8px;
+}
+
+#legrect0,
+#legrect1,
+#legrect2 {
+	stroke: black;
+	stroke-width: 1px;
+}
+
 #leginf p {
 	text-align: center;
 }
@@ -337,9 +367,7 @@ header {
 	text-align: right;
 }
 
-#legrow svg {
-	padding-top: 5px;
-}
+
 
 
 /* =========================================

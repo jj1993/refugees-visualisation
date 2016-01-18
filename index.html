@@ -84,12 +84,19 @@
 
           <div class="header">
             <h1>Vluchtelingen in Europa</h1>
-            <p>Hier is de visualisatie weergegeven. Er kan tussen weergaves gewisseld worden via de menubalk</p>
-            <div class="underline">
-              <i class="fa fa-briefcase"></i>
-            </div>
+            <p>Hier is de visualisatie weergegeven. Er kan tussen weergaves gewisseld worden via de menubalk. Met de schuifbalk wordt er door de tijd bewogen. Als u op een land klikt worden de belangrijkste migratiestromen naar het land toe weergegeven.</p>
+            <hr>
           </div> <!-- end .container> .header -->
 
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="checkbox" id="check">
+                <label><input type="checkbox" name="flow">Verberg vluchtelingenstromen</label>
+                <br/>
+                <label><input type="checkbox" name="graph">Verberg grafiek</label>
+              </div>
+            </div>
+          </div>
           <!-- Time slider bar -->
           <div class="row">
             <div class="col-lg-2" id="date">
@@ -109,69 +116,43 @@
             </div>
           </div>
 
+
           <!-- Start of legenda -->
-<!--           <div class="row">
-            <div class="col-lg-12">
-              <b>Legenda</b>
-            </div>
-          </div> -->
           <div class="row" id="leginf">
-            <div class="col-lg-6">
-              <p>Aantal vluchtelingen per 1000 inwoners</p>
-            </div>
-            <div class="col-lg-6">
-              <p>Aantal vluchtelingen naar land</p>
-            </div>
+            <div class="col-lg-6" id="type"><p>Aantal vluchtelingen per 1000 inwoners</p></div>
+            <div class="col-lg-6 line"><p>Grootte migratriestromen naar geselecteerde land</p></div>
           </div>
+            <!-- The three color elements of the legenda -->
           <div class="row" id="legrow">
+            <div class="col-lg-1" id="legvalue0"></div>
             <div class="col-lg-1">
-              <p>1</>
+              <svg class="legrect"><rect width="20" height="15" id="legrect0"/></svg>
             </div>
+
+            <div class="col-lg-1"  id="legvalue1"></div>
             <div class="col-lg-1">
-              <svg class="legrect" id="legrect1">
-                <rect width="20" height="15" style="fill:red" />
-              </svg>
+              <svg class="legrect"><rect width="20" height="15" id="legrect1"/></svg>
+            </div> 
+
+            <div class="col-lg-1"  id="legvalue2"></div>
+            <div class="col-lg-1">
+              <svg class="legrect"><rect width="20" height="15" id="legrect2"/></svg>
+            </div> 
+            <!-- The three line elements of the legenda -->
+            <div class="col-lg-1" id="legvalue3"></div>
+            <div class="col-lg-1">
+              <svg class="legrect" id="legrect3"></svg>
             </div>
-             <div class="col-lg-1">
-              <p>2</p>
-            </div>
+
+            <div class="col-lg-1"  id="legvalue4"></div>
+            <div class="col-lg-1 line">
+              <svg class="legrect" id="legrect4"></svg>
+            </div> 
+
+            <div class="col-lg-1"  id="legvalue5"></div>
             <div class="col-lg-1">
-              <svg class="legrect" id="legrect1">
-                <rect width="20" height="15" style="fill:red" />
-              </svg>
-            </div>            
-            <div class="col-lg-1">
-              <p>3</p>
-            </div>
-            <div class="col-lg-1">
-              <svg class="legrect" id="legrect1">
-                <rect width="20" height="15" style="fill:red" />
-              </svg>
-            </div>            
-            <div class="col-lg-1">
-              <p>1</p>
-            </div>
-            <div class="col-lg-1">
-              <svg class="legrect" id="legrect1">
-                <rect width="20" height="15" style="fill:red" />
-              </svg>
-            </div>            
-            <div class="col-lg-1">
-              <p>2</p>
-            </div>
-            <div class="col-lg-1">
-              <svg class="legrect" id="legrect1">
-                <rect width="20" height="15" style="fill:red" />
-              </svg>
-            </div>            
-            <div class="col-lg-1">
-              <p>3</p>
-            </div>
-            <div class="col-lg-1">
-              <svg class="legrect" id="legrect1">
-                <rect width="20" height="15" style="fill:red" />
-              </svg>
-            </div>
+              <svg class="legrect" id="legrect5" width="70"></svg>
+            </div> 
           </div>
 
         </div> <!-- end .container -->

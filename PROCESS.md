@@ -67,3 +67,20 @@ de ontwikkeling van het aantal vluchtelingen over de jaren heen weergeeft. Met d
 Niet alle landen hebben data, wat kan zorgen voor een error bij het klikken op een land. Alleen een goede legenda ontbreekt nog van de
 minimum viable product, zoals beschreven in het design document.
 
+#Dag 11, 18 januari
+
+Naar aanleiding van de feedback van afgelopen vrijdag heb ik een checklist gemaakt met dingen die ik nog wil afronden deze week.
+Vandaag heb ik een legenda ingevoegd, bij het hoveren over een lang waar migranten vandaan komen licht deze lijn op, bij het hoveren over een
+land komt de naam van dat land naar boven en ik heb twee checkboxes ingevoegd waarmee de migrantenstromen of de popup-grafiek uitgezet kunnen worden.
+
+Wat ik nog moet doen deze week:
+* Een knop onder de popup-grafiek, waarbij de popup groeit tot het grootste deel van het scherm en er de volgende gegevens inkomen:
+	* Een lijngrafiek met uitgebreide informatie over de totale migratiestromen in de wereld
+	* Een piechard waarop de vluchtelingenpopulatie uiteengezet wordt naar afkomst
+	* De 'rank' van het land in het aantal vluchtelingen per inwoner, GDP of km2 ten opzichten van de rest van de wereld
+* Een tweede tabblad in de HTML met
+	* Een sorted-barchard waarin de 20 hoogst scorende landen in het aantal vluchtelingen per inwoner, GDP of km2 weergegeven worden
+	* Een lijngrafiek met uitgebreide informatie over de totale migratiestromen in de wereld
+* Een scrollfunctie in de wereldkaart
+
+
