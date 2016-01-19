@@ -237,7 +237,7 @@ function legenda() {
 			.attr("style","border-style: hidden")
 			.attr("rx", q/2)
 			.attr("ry", q/2)
-
+			.attr("style", "fill: #9e4848")
 	}
 }
 
@@ -247,6 +247,12 @@ function update(n) {
 	var date = new Date(scaleToDate(n));
 	year = date.getFullYear();
 	d3.select("#monthyear").text(monthNameFormat(date) + " " + year);
+	try {svg.select("#graphTimeLine")
+			.attr("x1", x(new Date(day.parse(YEARS[year]))))
+			.attr("x2", x(new Date(day.parse(YEARS[year]))))
+		}
+	catch (err) {}
+	console.log(svg.select("#graphTimeLine"))
 	drawMap(year);
 	updateLegenda();
 }
@@ -299,7 +305,7 @@ function getRefugeeFlows(c, y) {
 			catch (err) {
 				var rep = 0;
 			}
-		t.push([e.codeOrigin, q, rep])
+		t.push([e.codeOrigin, q, e.origin])
 		}
 	}
 	return t
@@ -404,7 +410,6 @@ function highLight(c) {
 			var n = highlight[c];
 			$("#line"+n).attr("stroke",color);
 			$("#circle"+n).attr("fill",color);
-			console.log($("#cirle"+n))
 			$("#mcircle").attr("fill",color);
 		}
 	}
@@ -437,69 +442,180 @@ function drawInfo(d, pos) {
 	graph.style.position = "absolute";
 	graph.style.left = x + 'px';
 	graph.style.top = y + 'px';
-	graph.style.padding = "15px";
+	graph.style.padding = "25px";
 	graph.setAttribute("class", "graph");
 
 	d3.select(".graph").append("text")
 		.text("Total number of refugees in "+d[year][3])
 		.attr("id", "graphName");
+
 	var graphSVG = d3.select(".graph").append("svg")
+						// .attr("width", 0)
+						// .attr("height", 0)
+						// .transition()
 						.attr("width", 300)
-						.attr("height", 130)
+						.attr("height", 125)
 						.attr("id", "graphSVG");
+
+	// this function makes sure that the title will fit in the div
 	$(function() {
 	    while( $('#graphName').height() > 30) {
 	        $('#graphName').css('font-size', (parseInt($('#graphName').css('font-size')) - 1) + "px" );
 	    }
 	});
 
-	console.log($("#graphName").width())
-	console.log($("#graphSVG").width())
+	var data = sortData(d)	
+	var dim = [parseInt(graphSVG.style("width")), parseInt(graphSVG.style("height"))]
+	drawGraph(data, graphSVG, dim, false);
 
+	d3.select(".graph").append("button")
+		.attr("type", "button")
+		.attr("class", "btn btn-info")
+		.attr("id", "extgraph")
+		.text("Meer informatie")
+		.on("click", function() {extend(d)});
+}
+
+function sortData(d) {
 	var keys = Object.keys(d)
-	var data = []
+	var rawData = []
 	for (var i=0; i<keys.length; i++) {
 		var l = {}
 		var datum = new Date(day.parse(YEARS[keys[i]]))
+		var fdata = d[keys[i]][2]
+		for (var m=0; m<fdata.length; m++) {
+			var origin = fdata[m][2]
+			l[origin] = fdata[m][1]
+		}
 		l.date = datum
-		l.amount = d[keys[i]][0]
-		data.push(l)
+		l.Total = d[keys[i]][0]
+		rawData.push(l)
 	}
-	
-	drawGraph(data, graphSVG);
+
+	var data = []
+	for (var i=0; i<rawData.length; i++) {
+		var keys = Object.keys(rawData[i])
+		for (var k=0; k<keys.length; k++) {
+			var key = keys[k]
+			var q = rawData[i][key]
+			if (key != "date") {
+				data = updateData(rawData[i], data, key, q)
+			}
+		}
+	}
+	console.log(data)
+	return data
 }
 
-function drawGraph(data, svg) {
+function updateData(raw, d, k, q) {
+	for (var n=0; n<d.length; n++) {
+		if (d[n].name == k) {
+			d[n].data.push([raw.date, q])
+			return d
+		}
+	}
+	d.push({
+		name: k,
+		data: [[raw.date, q]]
+	})
+	return d
+}
+
+function extend(d) {
+	var graph = d3.select(".graph")
+	var width = graph.style("width")
+	var height = graph.style("height")
+	$(".graph").empty()
+
+	graph.append("text")
+		.text("Extended data on refugees in "+d[year][3])
+		.attr("id", "extGraphName");
+
+	graph
+		.style("width", width)
+		.style("height", height)
+		.transition()
+		.style("top", "20px")
+		.style("left", screen.width*0.1+'px')
+		.style("width", screen.width*0.8+'px')
+		.style("height", screen.height*0.4+'px')
+		.style("opacity", 0.95)
+		.style("pointer-events", "auto")
+		.style("padding-top", "50px");
+
+	var svg = graph.append("svg")
+		.style("height", "90%")
+		.style("width", "100%");
+
+	var data = sortData(d)
+	var dim = [screen.width*0.4,screen.height*0.28]
+	drawGraph(data, svg, dim, true)
+
+	svg.append("text")
+		.style("left", parseInt(width)/2)
+		.style("top", 50)
+		.text(d[year][1][0], d[year][1][1], d[year][1][2])
+}
+
+function drawGraph(data, svg, dim, e) {
 	// Code of simple graph from http://bl.ocks.org/d3noob/b3ff6ae1c120eea654b5
 
 	// Set the ranges
-	var margin = {top: 0, right: 0, bottom: 20, left: 15};
-    var width = parseInt(svg.style("width")) - margin.left - margin.right;
-    var height = parseInt(svg.style("height")) - margin.top - margin.bottom;
+	var margin = {top: 0, right: 0, bottom: 0.2*dim[1], left: 0.1*dim[0]};
+    var width = dim[0] - margin.left - margin.right;
+    var height = dim[1] - margin.top - margin.bottom;
 	var x = d3.time.scale().range([margin.left, width]);
 	var y = d3.scale.linear().range([height, margin.bottom]);
 	var t = Object.keys(data).length;
 
 	// Define the axes
 	var xAxis = d3.svg.axis().scale(x)
-	    .orient("bottom").ticks(t);
+	    .orient("bottom").ticks(5);
 
 	var yAxis = d3.svg.axis().scale(y)
-	    .orient("left").ticks(t);
-
-	// Define the line
-	var valueline = d3.svg.line()
-	    .x(function(d) { return x(d.date); })
-	    .y(function(d) { return y(d.amount); });
+	    .orient("left").ticks(5);
 
     // Scale the range of the data
-    x.domain(d3.extent(data, function(d) { return d.date; }));
-    y.domain([0, d3.max(data, function(d) { return d.amount; })]);
+    x.domain([new Date(day.parse(YEARS["2010"])), new Date(day.parse(YEARS["2016"]))]);
+    y.domain([0, d3.max(data, function(d) { return d3.max(d.data, function(c) { return c[1]; });})]);
 
-    // Add the valueline path.
-    svg.append("path")
-        .attr("class", "graphline")
-        .attr("d", valueline(data));
+    for (var i=0; i<data.length; i++) {
+    	var c = data[i]
+    	if (c.name == "Total" || e) {
+
+			// Define the line
+			var valueline = d3.svg.line()
+			    .x(function(d) { return x(d[0]); })
+			    .y(function(d) { return y(d[1]); });
+
+			// Add the valueline path.
+			var color = "hsl(" + i/data.length * 360 + ",100%,50%)"
+			svg.append("path")
+			        .attr("class", "graphline")
+			        .attr("d", valueline(c.data))
+			        .attr('stroke', color);
+
+			// Add the legenda
+			if (e) {
+	        svg.append("text")
+		    	.attr("x", function() {console.log(50 + 50* (i%3), i); return 5 + 50* (i%3) +'px'})
+		    	.attr("y", function() {return 15 + 15*Math.floor(i/3)+'px'})
+		    	.attr("class", "legend")
+		    	.attr("width", "50px")
+		    	.style("fill", color)
+		    	.text(c.name);
+		    }
+    	}
+    }
+    if(e) {svg.append("line")
+    		.attr("id", "graphTimeLine")
+			.attr("x1", x(new Date(day.parse(YEARS[year]))))
+			.attr("y1", 50)
+			.attr("x2", x(new Date(day.parse(YEARS[year]))))
+			.attr("y2", 150)
+			.attr("stroke-width", 4)
+			.attr("stroke", "#9e4848")
+	}
 
     // Add the X Axis
     svg.append("g")

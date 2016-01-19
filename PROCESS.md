@@ -83,4 +83,7 @@ Wat ik nog moet doen deze week:
 	* Een lijngrafiek met uitgebreide informatie over de totale migratiestromen in de wereld
 * Een scrollfunctie in de wereldkaart
 
+#Dag 12, 19 januari
 
+De knop onder de grafiek waarmee de grafiek uitklapt en een multilineplot geeft is af. Ik probeer nu ook de andere informatie en een taart-
+diagram toe te voegen.

@@ -332,11 +332,18 @@ header {
 	font-size: 15px;
 	position: absolute;
 	left: 30px;
-	top: 5px;
+	top: 0px;
+}	
+
+.graph #extGraphName {
+	font-size: 25px;
+	position: absolute;
+	left: 300px;
+	top: 0px;
 }	
 
 .graph path { 
-    stroke: steelblue;
+   /* stroke: steelblue;*/
     stroke-width: 2px;
     fill: none;
 }
@@ -348,6 +355,14 @@ header {
     shape-rendering: crispEdges;
 }
 
+#extgraph {
+	position: absolute;
+	left: 130px;
+	bottom: 1px;
+	font-size: 10px;
+	pointer-events: auto;
+}
+
 #legrow svg {
 	padding-top: 8px;
 }
@@ -357,6 +372,7 @@ header {
 #legrect2 {
 	stroke: black;
 	stroke-width: 1px;
+	fill: white;
 }
 
 #leginf p {
@@ -366,8 +382,6 @@ header {
 #legrow p {
 	text-align: right;
 }
-
-
 
 
 /* =========================================
