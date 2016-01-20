@@ -87,3 +87,7 @@ Wat ik nog moet doen deze week:
 
 De knop onder de grafiek waarmee de grafiek uitklapt en een multilineplot geeft is af. Ik probeer nu ook de andere informatie en een taart-
 diagram toe te voegen.
+
+#Dag 13, 20 januari
+
+In de uitgeklapte grafiek wordt nu ook de rank weergegeven en een interactieve pie-chard waarmee de gebruiker het relatieve aantal vluchtelingen per land kan zien.
