@@ -1,10 +1,14 @@
 import json
 
-FILES = ['total.json', 'colorvalues2.json',  'refugees.json'] 
-ISO = "iso.json"
+FILES = ['../total.json', '../colorvalues.json',  '../refugees.json'] 
+ISO = "../iso.json"
 
 
 def clean(name):
+    """
+    Vervangt afkortingen en spelfouten met de correcte namen,
+    zodat namen overeen komen met het VN ISO-format
+    """
     name = name.replace("Rep.","Republic")
     name = name.replace("Dem.","Democratic")
     name = name.replace("Congo, Republic of","Congo")
@@ -50,6 +54,9 @@ def clean(name):
     return name
         
 def giveIso(f):
+    """
+    Voegt de ISO-waardes toe aan de dictionaries met een nieuwe key
+    """
     iso = open(ISO).read()
     d = json.loads(iso)  
     

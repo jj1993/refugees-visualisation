@@ -91,3 +91,15 @@ diagram toe te voegen.
 #Dag 13, 20 januari
 
 In de uitgeklapte grafiek wordt nu ook de rank weergegeven en een interactieve pie-chard waarmee de gebruiker het relatieve aantal vluchtelingen per land kan zien.
+
+#Dag 14, 21 januari
+
+In de uitgeklapte grafiek is een pie-chart toegevoegd waarmee de gebruiker het relatieve aandeel van de vluchtelingen uit een bepaald land van oorsprong, aan het totale aantal vluchtelingen, kan zien in een bepaald jaar. De pie-chard heeft nog wel een bugg, waardoor hij niet altijd rond is
+
+#Dag 15, 22 januari
+
+De bugs in de pie-chard zijn verholpen. In het menu is een link naar een nieuwe pagina ingevoegd, waarin een sorted-bar-chard weergegeven wordt. De gebruiker kan wisselen tussen de relatieve weergave ten opzichten van het totale aantal inwoners, het totalen inkomen of het oppervlak van het land. Door opnieuw te sorteren kunnen deze relaties beter bestudeerd worden. De sorteer functie van de bar-graph is nog wat buggy en de schalen lijken niet altijd goed te werken.
+
+#Zaterdag 23 januari
+
+De bar-chard is nu debugged en er is meer structuur aangebracht in de repository. De wereldkaart en sorted-barchard kleuren nu mee wanneer een ander datatype wordt geselecteerd.

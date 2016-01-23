@@ -1,0 +1,170 @@
+/* =========================================
+
+Author: Jonathan Jeroen Beekman
+Student nr: 10345019;
+Description: Personal style edits;
+
+========================================= */
+
+
+
+/* ========================
+	Pop-up graph css
+======================== */
+
+#map {
+	padding: 0;
+}
+
+#map .country {
+	fill: #bdbdbd;
+	stroke: #222222;
+	stroke-width:1px;
+}
+
+#map .country:hover {
+	fill: white !important;
+	stroke-width:1.5px;
+}
+
+#map svg {
+    background-image: url("../doc/backgr-pattern.png");
+    background-repeat: repeat;
+}
+
+#map .line {
+	pointer-events: none;
+}
+
+#map #countryName {
+	pointer-events: none;
+	text-shadow: 1px 1px white;
+}
+
+
+/* ========================
+	Pop-up graph css
+======================== */
+
+.graph {
+	pointer-events: none;
+	background: white;
+	opacity: 0.85;
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.graph #closebtn {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+}
+
+.graph text {
+    -moz-text-decoration-color: black; /* Code for Firefox */
+    text-decoration-color: black;
+    font-size: 10px;
+    font-family: Sans-Serif;
+}
+
+.graph #graphName {
+	font-size: 15px;
+	position: absolute;
+	left: 30px;
+	top: 5px;
+}	
+
+
+
+.graph path {
+    stroke-width: 2px;
+    fill: none;
+}
+
+.graph g {
+    fill: none;
+    stroke: black;
+    stroke-width: 1.5px;
+    shape-rendering: crispEdges;
+}
+
+
+
+/* ========================
+	Extended graph css
+======================== */
+
+#extgraph {
+	position: absolute;
+	left: 130px;
+	bottom: 1px;
+	font-size: 10px;
+	pointer-events: auto;
+}
+
+#extgraph #extGraphName {
+	font-size: 25px;
+	position: absolute;
+	left: 300px;
+	top: 0px;
+}	
+
+#extgraph .extrank {
+	font-size: 12px;
+	position: absolute;
+}
+
+#extgraph .slices path {
+	stroke: none;
+}
+
+#extgraph .slices text {
+	position: absolute;
+	left: 200px;
+}
+
+#extgraph polyline {
+  opacity: .3;
+  stroke: black;
+  stroke-width: 1px;
+  fill: none;
+}
+
+#extgraph #legrow svg {
+	padding-top: 8px;
+}
+
+
+/* ========================
+		Barchard css
+======================== */
+
+svg .bartext {
+
+	pointer-events: none;
+	text-shadow: 1px 1px black;
+}
+
+
+/* =======================
+		legenda
+========================*/
+
+#legrect0,
+#legrect1,
+#legrect2 {
+	stroke: black;
+	stroke-width: 1px;
+	fill: white;
+}
+
+#leginf p {
+	text-align: center;
+}
+
+#legrow p {
+	text-align: right;
+}

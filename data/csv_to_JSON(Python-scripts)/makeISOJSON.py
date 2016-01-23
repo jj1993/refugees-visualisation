@@ -1,7 +1,7 @@
 import json
 
-FILE = 'UN_ISO_codes.csv'
-OUTPUTFILE = 'iso.json'
+FILE = '../UN_ISO_codes.csv'
+OUTPUTFILE = '../iso.json'
             
 def makeDict(filename):
     """

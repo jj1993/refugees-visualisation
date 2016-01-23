@@ -1,11 +1,11 @@
 import json
 
 FILES = ['2010.csv', '2011.csv', '2012.csv', '2013.csv' ,'2014.csv', '2015.csv']
-OUTPUTFILE = 'refugees.json'
+OUTPUTFILE = '../refugees.json'
             
 def makeDict(filename):
     """
-    Leest de csv-file met de rooster data
+    Leest de csv-file met de migratie-stromen data
     Zet de data om in een lijst van dictionaries
     """
     data=open(filename).read()
@@ -28,6 +28,9 @@ def makeDict(filename):
     return l
 
 def combine(data):
+    """
+    Combineert de variabelen tot een lijst
+    """
     newList = []
     
     for n, year in enumerate(data):
@@ -64,7 +67,7 @@ if __name__ == '__main__':
     print "Sorting courses data..."
     data = []
     for f in FILES:
-        year = makeDict('cleaned_data/'+f)
+        year = makeDict('../cleaned_data/'+f)
         data.append(year)
     c = combine(data)
 

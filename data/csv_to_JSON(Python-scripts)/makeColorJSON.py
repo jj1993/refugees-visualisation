@@ -1,15 +1,16 @@
+# -*- coding: cp1252 -*-
 import json
 
 FILES = ['2010color.csv', '2011color.csv', '2012color.csv',
          '2013color.csv' ,'2014color.csv', '2015color.csv']
-OUTPUTFILE = 'colorvalues2.json'
+OUTPUTFILE = '../colorvalues.json'
             
 def makeDict(filename):
     """
-    Leest de csv-file met de rooster data
+    Leest de csv-file met de relatieve data-waardes per land
     Zet de data om in een lijst van dictionaries
     """
-    y = filename[13:17]
+    y = filename[16:20]
     data=open(filename).read()
     l = []
     
@@ -25,7 +26,9 @@ def makeDict(filename):
                         try: e = float(e.replace(",",""))
                         except: e = "NaN"
                     else:
-                        try: e = float(e.strip(".").replace(",","."))
+                        try:
+                            e = e.replace(".","")
+                            e = float(e.replace(",","."))
                         except: e = "NaN"
                 t.append(e)
         if len(t) > 0:
@@ -36,6 +39,9 @@ def makeDict(filename):
     return l
 
 def combine(data):
+    """
+    Combineert de variabelen tot één lijst
+    """
     newList = []
 
     for d in data:
@@ -62,7 +68,7 @@ if __name__ == '__main__':
     print "Sorting courses data..."
     data = []
     for f in FILES:
-        year = makeDict('cleaned_data/'+f)
+        year = makeDict('../cleaned_data/'+f)
         data.append(year)
     c = combine(data)
     print "Compiling JSON..."

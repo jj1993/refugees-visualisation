@@ -120,39 +120,6 @@ ul li {
 	padding-top: 100px;
 	padding-bottom:50px;
 }
-.carousel-indicators {
-	bottom: -50px;
-}
-.social a {
-	display: block;
-	width: 40px;
-	font-size: 28px;
-	border-radius: 100%;
-	text-align: center;
-	color: #949494;
-	margin: 10px 0;
-	-webkit-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	transition: all 0.3s;
-}
-.social a:hover {
-	color: #0099FF;
-}
-.form-control {
-	color: #555;
-	background-color: #fff;
-	background-image: none;
-	border: 1px solid #ccc;
-	-webkit-box-shadow: none;
-	box-shadow: none;
-}
-.form-control:focus,
-textarea:focus {
-	border-color: #0099FF !important;
-	outline: 0;
-	-webkit-box-shadow: none;
-	box-shadow: none;
-}
 
 
 
@@ -160,7 +127,7 @@ textarea:focus {
    3. Section Header                 
 ========================================= */
 header {
-	background: url(images/bg.jpg) 50% 0 no-repeat fixed;
+	background: url(../doc/bg.jpg) 50% 0 no-repeat fixed;
 	background-size: cover;
 }
 .top .photo-slide {
@@ -228,7 +195,6 @@ header {
 	clear: both;
 }
 .navigation .navbar-default .navbar-collapse{
-
 	background-color: #181B3D;
 }
 .navigation .navbar-default .navbar-nav>li>a {
@@ -238,13 +204,7 @@ header {
 	padding-bottom: 25px;
 }
 
-.navigation .navbar-default .navbar-nav>li>a:hover,
-.navigation .navbar-default .navbar-nav>.active>a,
-.navigation .navbar-default .navbar-nav>.active>a:hover,
-.navigation .navbar-default .navbar-nav>.active>a:focus {
- 	background: none;
- 	color: #0099FF;
- }
+
 
 /* =========================================
    5. Section Features                 
@@ -298,117 +258,100 @@ header {
 	border-radius: 0;
 }
 
-#map svg {
-    background-image: url("../images/backgr-pattern.png");
-    background-repeat: repeat;
-}
-.line {
-	pointer-events: none;
-}
-
-#countryName {
-	pointer-events: none;
-	text-shadow: 1px 1px white;
-}
-
-.graph {
-	pointer-events: none;
-	background: white;
-	opacity: 0.85;
-	border-style: solid;
-	border-width: 1px;
-	border-color: black;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-}
-
-.graph #closebtn {
-	position: absolute;
-	top: 10px;
-	right: 20px;
-}
-
-.graph text {
-    -moz-text-decoration-color: black; /* Code for Firefox */
-    text-decoration-color: black;
-    font-size: 10px;
-}
-
-.graph #graphName {
-	font-size: 15px;
-	position: absolute;
-	left: 30px;
-	top: 5px;
-}	
-
-.graph #extGraphName {
-	font-size: 25px;
-	position: absolute;
-	left: 300px;
-	top: 0px;
-}	
-
-.graph .extrank {
-	font-size: 12px;
-	position: absolute;
-}
-
-.graph path {
-    stroke-width: 2px;
-    fill: none;
-}
-
-.graph g {
-    fill: none;
-    stroke: black;
-    stroke-width: 1.5px;
-    shape-rendering: crispEdges;
-}
-
-#extgraph {
-	position: absolute;
-	left: 130px;
-	bottom: 1px;
-	font-size: 10px;
-	pointer-events: auto;
-}
-
-path .slice{
-  stroke-width:1px;
-}
-
-polyline {
-  opacity: .3;
-  stroke: black;
-  stroke-width: 1px;
-  fill: none;
-}
-
-#legrow svg {
-	padding-top: 8px;
-}
-
-#legrect0,
-#legrect1,
-#legrect2 {
-	stroke: black;
-	stroke-width: 1px;
-	fill: white;
-}
-
-#leginf p {
-	text-align: center;
-}
-
-#legrow p {
-	text-align: right;
-}
-
-
 /* =========================================
    14. Section Copyright                 
 ========================================= */
 .copyright {
 	text-align: center;
 	padding: 30px 0;
+}
+
+/* =========================================
+   15. Other                 
+========================================= */
+
+body {
+    background-color: #fff;
+    color: #222;
+}
+.dark-bg {
+	background-color: #F2F3FD;
+}
+h1 {
+	color: #111;
+}
+
+.underline:before,
+.underline:after {
+	background-color: #777;
+}
+.custom-btn {
+	color: #0099FF;
+	border: 1px solid #0099FF;
+}
+.top .content {
+	color: #fff;
+}
+.top .content h1 {
+	color: #fff;
+}
+.top .content .button .custom-btn {
+	color: #fff;
+	border-color: #fff;
+}
+
+.navbar-default {
+	background-color: #181B3D;
+}
+.navbar-default .navbar-nav>li>a {
+	color: #fff;
+}
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>.active>a,
+ .navbar-default .navbar-nav>.active>a:hover,
+ .navbar-default .navbar-nav>.active>a:focus {
+ 	background: none;
+ 	color: #0099FF;
+ }
+
+.featured-item .icon i {
+	color: #0099FF;
+}
+.featured-item h3 {
+	color: #2E2E2E;
+}
+.description .content .list-item li i {
+	color: #0099FF;
+}
+.testimonial .testimonial-slide .content {
+	color: #f1f1f1;
+}
+.team .member .details p {
+	color: #fff;
+}
+.price .price-table {
+	padding:0 30px;
+}
+
+.price .price-list ul li i.fa-check {
+	border: 1px solid #0099FF;
+	color: #0099FF;
+}
+.price .price-list ul li i.fa-times {
+	border:1px solid #e74c3c;
+	color: #e74c3c;
+}
+.download {
+	color: #fff;
+}
+.download .header h1 {
+	color: #fff;
+}
+.download .custom-btn {
+	color: #fff;
+	border: 2px solid #fff;
+}
+.input-group-addon {
+	color: #555;
+	border: 1px solid #ccc;
 }

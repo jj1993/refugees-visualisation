@@ -62,11 +62,11 @@
             <div class="navbar-collapse collapse navbar-right">
               <ul id="ulnav" class="nav navbar-nav">
                 <li><a href="#top">Home</a></li>
-                <li><a href="#date" id="inhibitans">Refugees per 1000 inhibitans</a></li>
+                <li><a href="#date" id="inhibitants">Refugees per 1000 inhibitans</a></li>
                 <li><a href="#date" id="gdp">Refugees per GDP</a></li>
                 <li><a href="#date" id="km2">Refugees per 1000km<sup>2</sup></a></li>
 
-                <li><a href="#" id="worldgraph">More graphs on refugees</a></li>
+                <li><a href="#" id="index">Back to the worldmap</a></li>
                 <!-- <li><a href="http://www.unhcr.org/statistics/">UNHCR Statistieken</a></li> -->
               </ul>
             </div><!-- end .navbar-collapse -->
@@ -84,16 +84,14 @@
 
           <div class="header">
             <h1>Refugees in Europe</h1>
-            <p>A map is shown of the world. The colors show the relative pressere the refugees exert on the country. With the slider you can move from the year 2010 to the year 2016. When clicking on a country, the most prominent migration flows are displayed, as well as a linegraph with the evolution of the total amount of refugees over the past years. The graph can be extended for more information.</p>
+            <p>A sorted bar chard is shown for 15 countries. The selected data is shown on the bottom left of the figure. By clicking the menu, other data can be selected. On clicking the 'Sort Barchart' button, the 15 highest scoring countries will be shown. By sliding the bar in the top of the screen, other years can be selected.</p>
             <hr>
           </div> <!-- end .container> .header -->
 
           <div class="row">
             <div class="col-lg-12">
               <div class="checkbox" id="check">
-                <label><input type="checkbox" name="flow">Hide migration flows</label>
-                <br/>
-                <label><input type="checkbox" name="graph">Hide pop-up graphs</label>
+                <button type="button" class="btn" id="sort">Sort barchart</button>
               </div>
             </div>
           </div>
@@ -204,26 +202,11 @@
 
     <script src="js/jquery/jquery-ui.js"></script>
 
-    <!-- Data reformat functions -->
-    <script src="js/main/data.js"></script>
+    <!-- Slider plugin -->
+    <script src="js/barchard/update.js"></script>
 
-    <!-- Main javascript with worldmap -->
-    <script src="js/main.js"></script>
-
-    <!-- pop-up graph functions -->
-    <script src="js/main/popup-graph.js"></script>
-
-    <!-- migration lines functions -->
-    <script src="js/main/migration-flows.js"></script>
-
-    <!-- linegraph functions -->
-    <script src="js/main/linechard.js"></script>
-
-    <!-- piegraph functions -->
-    <script src="js/main/piechard.js"></script>
-
-    <!-- Update functions -->
-    <script src="js/main/update.js"></script>
+    <!-- Custom javascript with worldmap -->
+    <script src="js/barchard.js"></script>
 
   </body>
 </html>

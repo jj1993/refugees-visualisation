@@ -2,11 +2,11 @@ import json
 
 FILESSPACE = ['2010total', '2011total']
 FILESCSV = ['2012total.csv', '2013total.csv', '2014total.csv', '2015total.csv','2016total.csv'] 
-OUTPUTFILE = 'total.json'
+OUTPUTFILE = '../total.json'
           
 def makeDictSpace(filename, l):
     """
-    Leest de csv-file met de codeer data
+    Leest de csv-file met de data van het totale aantal vluchtelingen
     Zet de data om in een lijst van dictionaries
     """
     data=open(filename).read()
@@ -85,8 +85,8 @@ if __name__ == '__main__':
     print "Sorting ISO data..."
     l = []
     for f in FILESSPACE:
-        l = makeDictSpace('cleaned_data/'+f, l)
+        l = makeDictSpace('../cleaned_data/'+f, l)
     for f in FILESCSV:
-        l = makeDictCSV('cleaned_data/'+f, l)
+        l = makeDictCSV('../cleaned_data/'+f, l)
     print "Compiling JSON..."
     makeJSON(l, OUTPUTFILE)
