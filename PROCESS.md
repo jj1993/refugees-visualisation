@@ -103,3 +103,11 @@ De bugs in de pie-chard zijn verholpen. In het menu is een link naar een nieuwe 
 #Zaterdag 23 januari
 
 De bar-chard is nu debugged en er is meer structuur aangebracht in de repository. De wereldkaart en sorted-barchard kleuren nu mee wanneer een ander datatype wordt geselecteerd.
+
+#Dag 16, 25 januari
+
+Namen van functies en variabelen verduidelijkt. Een paar kleine bugs verholpen. Functies beter opgesteld.
+
+#Dag 17, 26 januari
+
+Verder gegaan met opschonen en verduidelijken van code. Bronvermelding op website beschikbaar gemaakt. Knop toegevoegd waarmee de tijd afgespeeld kan worden. Laadscherm ingevoegd.

@@ -42,7 +42,14 @@
                 <div class="content">
                   <h1><strong>Refugees</strong> in Europe</h1>
                   <h2>An educated view on the European migrant crisis</h2>
-                  <p>The European migrant crisis is all over the news, but how these migration flows developed over the last years is largely unknown. From what countries do these refugees come, and how are the countries outside of Europe affected? This website is designed to give an easy and clear insight into the data and statistics on refugees all over the world.</p>
+                  <p>The European migrant crisis is all over the news, but how 
+                    these migration flows developed over the last years is 
+                    largely unknown. From what countries do these refugees come, 
+                    and how are the countries outside of Europe affected? 
+                    This website is designed to give an easy and clear insight 
+                    into the data and statistics on refugees all over the world. 
+                    Don't forget to try the tab 
+                    <a href="#" id="bartab">More data on refugees</a>!</p>
                 </div> <!-- end .content -->
               </div> <!-- end .top > .container> .row> .col-md-7 -->
 
@@ -62,12 +69,15 @@
             <div class="navbar-collapse collapse navbar-right">
               <ul id="ulnav" class="nav navbar-nav">
                 <li><a href="#top">Home</a></li>
-                <li><a href="#date" id="inhibitans">Refugees per 1000 inhibitans</a></li>
-                <li><a href="#date" id="gdp">Refugees per GDP</a></li>
-                <li><a href="#date" id="km2">Refugees per 1000km<sup>2</sup></a></li>
-
-                <li><a href="#" id="worldgraph">More graphs on refugees</a></li>
-                <!-- <li><a href="http://www.unhcr.org/statistics/">UNHCR Statistieken</a></li> -->
+                <li><a href="#" id="UNHCR">UNHCR statistics</a></li>
+                <li><a href="#check" id="inhibitans">
+                  Refugees per 1000 inhibitans
+                </a></li>
+                <li><a href="#check" id="gdp">Refugees per GDP</a></li>
+                <li><a href="#check" id="km2">
+                  Refugees per 1000km<sup>2</sup>
+                </a></li>
+                <li><a href="#" id="barchard">More data on refugees</a></li>
               </ul>
             </div><!-- end .navbar-collapse -->
           </div> <!-- end .container -->
@@ -84,26 +94,41 @@
 
           <div class="header">
             <h1>Refugees in Europe</h1>
-            <p>A map is shown of the world. The colors show the relative pressere the refugees exert on the country. With the slider you can move from the year 2010 to the year 2016. When clicking on a country, the most prominent migration flows are displayed, as well as a linegraph with the evolution of the total amount of refugees over the past years. The graph can be extended for more information.</p>
+            <p>A map is shown of the world. The colors show the relative 
+              pressere the refugees exert on the country. With the slider you 
+              can move from the year 2010 to the year 2016. When clicking on a 
+              country, the most prominent migration flows are displayed, as well 
+              as a linegraph with the evolution of the total amount of refugees 
+              over the past years. The graph can be extended for more 
+              information.</p>
             <hr>
           </div> <!-- end .container> .header -->
 
           <div class="row">
             <div class="col-lg-12">
               <div class="checkbox" id="check">
-                <label><input type="checkbox" name="flow">Hide migration flows</label>
+                <label><input type="checkbox" name="flow">
+                  Hide migration flows
+                </label>
                 <br/>
-                <label><input type="checkbox" name="graph">Hide pop-up graphs</label>
+                <label><input type="checkbox" name="graph">
+                  Hide pop-up graphs
+                </label>
               </div>
             </div>
           </div>
           <!-- Time slider bar -->
           <div class="row">
+            <div class="col-lg-1">
+              <button type="button" id="button_play" class="btn" onclick='buttonPlayPress()'>
+                <i class="fa fa-play"></i>
+              </button>
+            </div>
             <div class="col-lg-2" id="date">
               <p id="monthyear">
               </p>
             </div>
-            <div class="col-lg-10" id="slider-col">
+            <div class="col-lg-9" id="slider-col">
               <div id="slider">
                 <div id="slider-scrub" class="ui-widget-content">•</div>
               </div>
@@ -113,30 +138,38 @@
           <!-- The world map itself! -->
           <div class="row">
             <div class="col-lg-12" id="map">
+              <p><img src="doc/Loading_video.gif"></p>
             </div>
           </div>
 
 
           <!-- Start of legenda -->
           <div class="row" id="leginf">
-            <div class="col-lg-6" id="type"><p>Amount of refugees per 1000 inhibitants</p></div>
-            <div class="col-lg-6 line"><p>Size of migration flows to selected country</p></div>
+            <div class="col-lg-6" id="type">
+              <p>Amount of refugees per 1000 inhibitants</p>
+            </div>
+            <div class="col-lg-6 line">
+              <p>Size of migration flows to selected country</p>
+            </div>
           </div>
             <!-- The three color elements of the legenda -->
           <div class="row" id="legrow">
             <div class="col-lg-1" id="legvalue0"></div>
             <div class="col-lg-1">
-              <svg class="legrect"><rect width="20" height="15" id="legrect0"/></svg>
+              <svg class="legrect"><rect width="20" height="15" id="legrect0"/>
+              </svg>
             </div>
 
             <div class="col-lg-1"  id="legvalue1"></div>
             <div class="col-lg-1">
-              <svg class="legrect"><rect width="20" height="15" id="legrect1"/></svg>
+              <svg class="legrect"><rect width="20" height="15" id="legrect1"/>
+              </svg>
             </div> 
 
             <div class="col-lg-1"  id="legvalue2"></div>
             <div class="col-lg-1">
-              <svg class="legrect"><rect width="20" height="15" id="legrect2"/></svg>
+              <svg class="legrect"><rect width="20" height="15" id="legrect2"/>
+              </svg>
             </div> 
             <!-- The three line elements of the legenda -->
             <div class="col-lg-1" id="legvalue3"></div>
@@ -205,7 +238,7 @@
     <script src="js/jquery/jquery-ui.js"></script>
 
     <!-- Data reformat functions -->
-    <script src="js/main/data.js"></script>
+    <script src="js/main/data.js"></script>    
 
     <!-- Main javascript with worldmap -->
     <script src="js/main.js"></script>
@@ -224,6 +257,9 @@
 
     <!-- Update functions -->
     <script src="js/main/update.js"></script>
+
+    <!-- the sand of times -->
+    <script src="js/playbutton.js"></script>
 
   </body>
 </html>

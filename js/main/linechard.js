@@ -1,5 +1,11 @@
+// =====================================================
+// The small and extended pop-up linegraphs are initiated
+// here. 
+// =====================================================
+
 function drawGraph(data, svg, dim, e) {
 	// Code of simple graph from http://bl.ocks.org/d3noob/b3ff6ae1c120eea654b5
+	// The e-variable stands for 'extended' and is a boolean
 
 	// Set the ranges
 	var margin = {top: 0, right: 0, bottom: 0.2*dim[1], left: 0.1*dim[0]};
@@ -17,7 +23,7 @@ function drawGraph(data, svg, dim, e) {
 	    .orient("left").ticks(5);
 
     // Scale the range of the data
-    x.domain([new Date(day.parse(YEARS["2010"])), new Date(day.parse(YEARS["2016"]))]);
+    x.domain([new Date(dateFormat.parse(YEARS["20100"])), new Date(dateFormat.parse(YEARS["20155"]))]);
     y.domain([0, d3.max(data, function(d) {
     	if (e && d.name == "Total") {return};
     	return d3.max(d.values, function(c) { return c[1]; });
@@ -55,9 +61,6 @@ function drawGraph(data, svg, dim, e) {
 					    		$(this).css("color", "red");
 					    	}
 					    })
-						// .on("mouseleave", function() {
-						// 	$(".labels text").css("text-decoration-color", "black")
-						// });
 			        });
 
 
@@ -65,11 +68,10 @@ function drawGraph(data, svg, dim, e) {
     }
     if(e) {svg.append("line")
     		.attr("id", "graphTimeLine")
-			.attr("x1", x(new Date(day.parse(YEARS[year]))))
+			.attr("x1", x(new Date(dateFormat.parse(YEARS[dateKey]))))
 			.attr("y1", 40)
-			.attr("x2", x(new Date(day.parse(YEARS[year]))))
+			.attr("x2", x(new Date(dateFormat.parse(YEARS[dateKey]))))
 			.attr("y2", height)
-			// .attr("stroke-width", 2)
 			.attr("stroke", "black")
 			.style("stroke-dasharray", ("3, 3"))
 	}

@@ -34,16 +34,16 @@ function drawPie(data, svg, dim) {
 	var key = function(d){ return d.data.label; };
 
 	var keys = []
-	for (var i=0; i<data[year][2].length; i++) {
-		keys.push(data[year][2][i][2])
+	for (var i=0; i<data[dateKey][2].length; i++) {
+		keys.push(data[dateKey][2][i][2])
 	}
 
 	var color = d3.scale.ordinal().range(["#7fc97f","#beaed4", "#fdc086", "#ffff99", "#386cb0"]);
 
 	function pieData (){
 		r = [];
-		for (var i=0; i<data[year][2].length; i++) {
-			var label = data[year][2][i][2];
+		for (var i=0; i<data[dateKey][2].length; i++) {
+			var label = data[dateKey][2][i][2];
 			var b = true
 			for (var n=0; n<r.length; n++) {
 				if (r[n].label == label) {
@@ -53,8 +53,8 @@ function drawPie(data, svg, dim) {
 			}
 			if (b) {
 				r.push({
-					label: data[year][2][i][2],
-					value: data[year][2][i][1]
+					label: data[dateKey][2][i][2],
+					value: data[dateKey][2][i][1]
 				})
 			}
 		}
@@ -64,20 +64,20 @@ function drawPie(data, svg, dim) {
 	change(pieData());
 
 	// Update pie when sliding the slider
-	var oldYear = year
+	var olddateKey = dateKey
 	var clicking = false;
 	$("#slider-scrub").mousedown(function(){clicking = true;});
 	$(document).mouseup(function(){
 	    clicking = false;
-	    if (year != oldYear) {
-	    	oldYear = year;
+	    if (dateKey != olddateKey) {
+	    	olddateKey = dateKey;
 	    	change(pieData());
 	    }
 	});
 	$('#slider-scrub').mousemove(function(){
     	if(clicking == false) return;
-	    if (year != oldYear) {
-	    	oldYear = year;
+	    if (dateKey != olddateKey) {
+	    	olddateKey = dateKey;
 	    	change(pieData());
 	    }
 	});
@@ -151,7 +151,7 @@ function drawPie(data, svg, dim) {
 		/* ------- SLICE TO TEXT POLYLINES -------*/
 		$(".slices text").remove()
 		svg.select(".slices").append("text")
-							.text(year)
+							.text(currentDate.getFullYear())
 
 		var polyline = svg.select(".lines").selectAll("polyline")
 			.data(pie(data), key);

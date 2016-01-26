@@ -1,19 +1,28 @@
+// ======================================================
+// All data from the jsons is reformatted to be bound
+// to the countries and be used in the d3 template-graphs
+// ======================================================
+
 function getCountryData(idArr) {
+	// Function that collects data and puts it in the order of
+	// the countries, for proper data-object binding
+
 	// All data per country is combined to a list of dicts
 	var a = [];
-
-	var yearL = Object.keys(YEARS);
+	var yearArr = ["2010", "2011", "2012", "2013", "2014", "2015", "2016"]
+	var dateKeys = Object.keys(YEARS);
 	for (var n = 0; n < idArr.length; n++) {
 		var d = {};
 		var code = idArr[n];
 		var name = getName(code);
 		var centre = getCentre(code);
-		for (var i = 0; i < yearL.length; i++) {
-			var year = yearL[i];
+		for (var i = 0; i < yearArr.length; i++) {
+			var year = yearArr[i];
+			var key = dateKeys[i];
 			var totalAsylum = getTotal(code, year);
 			var colorValues = getColor(code, year);
 			var refugeeFlows = getRefugeeFlows(code, year);
-			d[year] = [totalAsylum, colorValues, refugeeFlows, name, centre, code];
+			d[key] = [totalAsylum, colorValues, refugeeFlows, name, centre, code];
 		}
 		a.push(d);
 	}
@@ -41,7 +50,7 @@ function getColor(c, y) {
 			for (var l = 0; l < TYPES.length; l++) {
 				var thistype = TYPES[l]
 				if (typeof e[thistype+y] == "number") {
-					t[thistype] = Math.log(e[thistype+y]+1);
+					t[thistype] = e[thistype+y]+1;
 					t[thistype+"rank"] = e[thistype+"rank"+y];
 				}
 				else {
@@ -60,14 +69,8 @@ function getRefugeeFlows(c, y) {
 	for (var m = 0; m < refugees.length; m++) {
 		var e = refugees[m];
 		if (c == e.codeAsylum) {
-			var q = e[y]
+			var q = e[y];
 			if (q == undefined) {break}
-			try {
-				var rep = e["rep"];
-			}
-			catch (err) {
-				var rep = 0;
-			}
 		t.push([e.codeOrigin, q, e.origin])
 		}
 	}
@@ -101,12 +104,11 @@ function getCentre(c) {
 
 function reformatData(d) {
 	// reformats data for use in the linegraph
-
 	var keys = Object.keys(d)
 	var rawData = []
 	for (var i=0; i<keys.length; i++) {
 		var l = {}
-		var datum = new Date(day.parse(YEARS[keys[i]]))
+		var datum = new Date(dateFormat.parse(YEARS[keys[i]]))
 		var fdata = d[keys[i]][2]
 		for (var m=0; m<fdata.length; m++) {
 			var origin = fdata[m][2]

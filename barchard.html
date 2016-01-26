@@ -42,7 +42,12 @@
                 <div class="content">
                   <h1><strong>Refugees</strong> in Europe</h1>
                   <h2>An educated view on the European migrant crisis</h2>
-                  <p>The European migrant crisis is all over the news, but how these migration flows developed over the last years is largely unknown. From what countries do these refugees come, and how are the countries outside of Europe affected? This website is designed to give an easy and clear insight into the data and statistics on refugees all over the world.</p>
+                  <p>The European migrant crisis is all over the news, but how 
+                    these migration flows developed over the last years is 
+                    largely unknown. From what countries do these refugees come, 
+                    and how are the countries outside of Europe affected? This 
+                    website is designed to give an easy and clear insight into 
+                    the data and statistics on refugees all over the world.</p>
                 </div> <!-- end .content -->
               </div> <!-- end .top > .container> .row> .col-md-7 -->
 
@@ -62,12 +67,16 @@
             <div class="navbar-collapse collapse navbar-right">
               <ul id="ulnav" class="nav navbar-nav">
                 <li><a href="#top">Home</a></li>
-                <li><a href="#date" id="inhibitants">Refugees per 1000 inhibitans</a></li>
-                <li><a href="#date" id="gdp">Refugees per GDP</a></li>
-                <li><a href="#date" id="km2">Refugees per 1000km<sup>2</sup></a></li>
+                <li><a href="#" id="UNHCR">UNHCR statistics</a></li>
+                <li><a href="#check" id="inhibitants">
+                  Refugees per 1000 inhibitans
+                </a></li>
+                <li><a href="#check" id="gdp">Refugees per GDP</a></li>
+                <li><a href="#check" id="km2">
+                  Refugees per 1000km<sup>2</sup>
+                </a></li>
 
                 <li><a href="#" id="index">Back to the worldmap</a></li>
-                <!-- <li><a href="http://www.unhcr.org/statistics/">UNHCR Statistieken</a></li> -->
               </ul>
             </div><!-- end .navbar-collapse -->
           </div> <!-- end .container -->
@@ -84,24 +93,35 @@
 
           <div class="header">
             <h1>Refugees in Europe</h1>
-            <p>A sorted bar chard is shown for 15 countries. The selected data is shown on the bottom left of the figure. By clicking the menu, other data can be selected. On clicking the 'Sort Barchart' button, the 15 highest scoring countries will be shown. By sliding the bar in the top of the screen, other years can be selected.</p>
+            <p>A sorted bar chard is shown for 15 countries. The selected data 
+              is shown on the bottom left of the figure. By clicking the menu, 
+              other data can be selected. On clicking the 'Sort Barchart' 
+              button, the 15 highest scoring countries will be shown. By sliding 
+              the bar in the top of the screen, other years can be selected.</p>
             <hr>
           </div> <!-- end .container> .header -->
 
           <div class="row">
             <div class="col-lg-12">
               <div class="checkbox" id="check">
-                <button type="button" class="btn" id="sort">Sort barchart</button>
+                <button type="button" class="btn" id="sort">
+                  Sort barchart
+                </button>
               </div>
             </div>
           </div>
           <!-- Time slider bar -->
           <div class="row">
+            <div class="col-lg-1">
+              <button type="button" id="button_play" class="btn" onclick='buttonPlayPress()'>
+                <i class="fa fa-play"></i>
+              </button>
+            </div>
             <div class="col-lg-2" id="date">
               <p id="monthyear">
               </p>
             </div>
-            <div class="col-lg-10" id="slider-col">
+            <div class="col-lg-9" id="slider-col">
               <div id="slider">
                 <div id="slider-scrub" class="ui-widget-content">•</div>
               </div>
@@ -113,46 +133,6 @@
             <div class="col-lg-12" id="map">
             </div>
           </div>
-
-
-          <!-- Start of legenda -->
-          <div class="row" id="leginf">
-            <div class="col-lg-6" id="type"><p>Amount of refugees per 1000 inhibitants</p></div>
-            <div class="col-lg-6 line"><p>Size of migration flows to selected country</p></div>
-          </div>
-            <!-- The three color elements of the legenda -->
-          <div class="row" id="legrow">
-            <div class="col-lg-1" id="legvalue0"></div>
-            <div class="col-lg-1">
-              <svg class="legrect"><rect width="20" height="15" id="legrect0"/></svg>
-            </div>
-
-            <div class="col-lg-1"  id="legvalue1"></div>
-            <div class="col-lg-1">
-              <svg class="legrect"><rect width="20" height="15" id="legrect1"/></svg>
-            </div> 
-
-            <div class="col-lg-1"  id="legvalue2"></div>
-            <div class="col-lg-1">
-              <svg class="legrect"><rect width="20" height="15" id="legrect2"/></svg>
-            </div> 
-            <!-- The three line elements of the legenda -->
-            <div class="col-lg-1" id="legvalue3"></div>
-            <div class="col-lg-1">
-              <svg class="legrect" id="legrect3"></svg>
-            </div>
-
-            <div class="col-lg-1"  id="legvalue4"></div>
-            <div class="col-lg-1 line">
-              <svg class="legrect" id="legrect4"></svg>
-            </div> 
-
-            <div class="col-lg-1"  id="legvalue5"></div>
-            <div class="col-lg-1">
-              <svg class="legrect" id="legrect5" width="70"></svg>
-            </div> 
-          </div>
-
         </div> <!-- end .container -->
       </div> <!-- end .features -->
     </section>
@@ -202,10 +182,10 @@
 
     <script src="js/jquery/jquery-ui.js"></script>
 
-    <!-- Slider plugin -->
-    <script src="js/barchard/update.js"></script>
+    <!-- Playbutton javascript -->
+    <script src="js/playbutton.js"></script>
 
-    <!-- Custom javascript with worldmap -->
+    <!-- Custom javascript with barchard -->
     <script src="js/barchard.js"></script>
 
   </body>

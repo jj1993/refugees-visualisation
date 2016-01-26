@@ -1,16 +1,16 @@
 /* =========================================
 
 Author: Jonathan Jeroen Beekman
-Student nr: 10345019;
-Description: Personal style edits;
+Student nr: 10345019
+Description: Personal style edits
 
 ========================================= */
 
 
 
-/* ========================
-	Pop-up graph css
-======================== */
+/* ==========================
+	worldmap and barchard css
+========================== */
 
 #map {
 	padding: 0;
@@ -33,12 +33,17 @@ Description: Personal style edits;
 }
 
 #map .line {
-	pointer-events: none;
+	/*pointer-events: none;*/
+	stroke-linecap: round;
 }
 
 #map #countryName {
 	pointer-events: none;
 	text-shadow: 1px 1px white;
+}
+
+#slider-scrub {
+	position: absolute;
 }
 
 
@@ -105,35 +110,35 @@ Description: Personal style edits;
 	pointer-events: auto;
 }
 
-#extgraph #extGraphName {
+.graph #extGraphName {
 	font-size: 25px;
 	position: absolute;
 	left: 300px;
 	top: 0px;
 }	
 
-#extgraph .extrank {
+.graph .extrank {
 	font-size: 12px;
 	position: absolute;
 }
 
-#extgraph .slices path {
+.graph .slices path {
 	stroke: none;
 }
 
-#extgraph .slices text {
+.graph .slices text {
 	position: absolute;
 	left: 200px;
 }
 
-#extgraph polyline {
+.graph polyline {
   opacity: .3;
   stroke: black;
   stroke-width: 1px;
   fill: none;
 }
 
-#extgraph #legrow svg {
+.graph #legrow svg {
 	padding-top: 8px;
 }
 

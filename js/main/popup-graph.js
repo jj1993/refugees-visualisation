@@ -1,3 +1,8 @@
+// =====================================================
+// A div element is initiated on top of the worldmap
+// respectively to the mouse. 
+// =====================================================
+
 function drawInfo(d, pos) {
 	// The popup window when clicking on a country is drawn
 
@@ -22,13 +27,13 @@ function drawInfo(d, pos) {
 				.style("width", '400px')
 				.style("height", '150px')
 			.append("text")
-				.text("Sorry, no data available for "+d[year][3])
+				.text("Sorry, no data available for "+d[dateKey][3])
 				.attr("id", "graphName");
 		return
 	}
 
 	d3.select(".graph").append("text")
-		.text("Total number of refugees in "+d[year][3])
+		.text("Total number of refugees in "+d[dateKey][3])
 		.attr("id", "graphName");
 
 	var graphSVG = d3.select(".graph").append("svg")
@@ -39,12 +44,15 @@ function drawInfo(d, pos) {
 	// this function makes sure that the title will fit in the div
 	$(function() {
 	    while( $('#graphName').height() > 30) {
-	        $('#graphName').css('font-size', (parseInt($('#graphName').css('font-size')) - 1) + "px" );
+	        $('#graphName')
+	        	.css('font-size', (parseInt($('#graphName')
+	        	.css('font-size')) - 1) + "px" );
 	    }
 	});
 
 	
-	var dim = [parseInt(graphSVG.style("width")), parseInt(graphSVG.style("height"))]
+	var dim = [parseInt(graphSVG.style("width")), 
+			   parseInt(graphSVG.style("height"))]
 	drawGraph(data, graphSVG, dim, false);
 
 	d3.select(".graph").append("button")
@@ -66,7 +74,7 @@ function extendInfo(d) {
 	$(".graph").empty()
 
 	graph.append("text")
-		.text("Extended data on refugees in "+d[year][3])
+		.text("Extended data on refugees in "+d[dateKey][3])
 		.attr("id", "extGraphName");
 
 	graph
@@ -95,7 +103,7 @@ function extendInfo(d) {
 	svg.append("text")
 		.style("left", parseInt(width)/2)
 		.style("top", 50)
-		.text(d[year][1][0], d[year][1][1], d[year][1][2])
+		.text(d[dateKey][1][0], d[dateKey][1][1], d[dateKey][1][2])
 
 	graph.append("button")
 		.attr("type", "button")
@@ -108,14 +116,20 @@ function extendInfo(d) {
 }
 
 function drawRanks(data) {
-
-	var l = data[year][1]
-	var keys = Object.keys(l)
+	// The 'ranked' data which is also used to color the map is displayed
+	var l = data[dateKey][1];
+	var keys = Object.keys(l);
+	var left = -150;
 
 	for (var n=0; n<keys.length; n++) {
+		if (n%2==0) {left += 300;}
 		d3.select(".graph").append("p")
 			.attr("class", "extrank")
-			.style("left", 50 + 300*n + 'px')
-			.text(typeText[keys[n]]+": "+l[keys[n]].toFixed(2))
+			.style("left", left + 'px')
+			.style("bottom", function() {
+				if (n%2==1) {return "0px"}
+				return "15px"
+			})
+			.text(typeText[keys[n]]+": "+l[keys[n]].toFixed(0))
 		}
 }
