@@ -22,7 +22,8 @@ function getCountryData(idArr) {
 			var totalAsylum = getTotal(code, year);
 			var colorValues = getColor(code, year);
 			var refugeeFlows = getRefugeeFlows(code, year);
-			d[key] = [totalAsylum, colorValues, refugeeFlows, name, centre, code];
+			d[key] = [totalAsylum, colorValues, refugeeFlows, 
+					  name, centre, code];
 		}
 		a.push(d);
 	}

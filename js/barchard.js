@@ -159,12 +159,14 @@ function drawSortedBarchard(colorValues) {
 
 	//Create SVG element
 	svg = d3.select("#map")
-				.append("svg")
+			.append("svg")
+				.attr("id", "mainsvg")
 				.attr("width", w)
 				.attr("height", h);
+	barg = svg.append("g");
 
 	//Create bars
-	svg.selectAll("rect")
+	barg.selectAll("rect")
 	   .data(dataset, key)
 	   .enter()
 	   .append("rect")
@@ -189,8 +191,23 @@ function drawSortedBarchard(colorValues) {
 			return scaleToColor(Math.random());
 	   })
 
+// ============================================================
+// 		Ran into weird error with the y-axis of the barplot
+// ============================================================
+ 
+ //    // Add the Y Axis
+	// var yAxis = d3.svg.axis().scale(yScale)
+	// 	    .orient("left").ticks(5);
+
+	// d3.select("#mainsvg").append("svg:g")
+ //        .attr("class", "baraxis")
+ //    	.attr("transform", "translate(" + w + ",0)")
+ //    	.attr("style", "stroke-width: 2px; stroke: black;")
+ //      .call(yAxis);
+
+
 	//Create labels
-	svg.selectAll("text")
+	barg.selectAll(".bartext")
 	   .data(dataset, key)
 	   .enter()
 	   .append("text")
@@ -212,8 +229,9 @@ function drawSortedBarchard(colorValues) {
 			return y;
 	   })
 	   .attr("font-family", "sans-serif") 
-	   .attr("font-size", "11px")
-	   .attr("fill", "white");
+	   .attr("font-size", "11px");
+
+
 	   
 	sortBars = function () {
 	    
@@ -317,6 +335,12 @@ function updateBarChard(colorValues) {
 			d3.select(this).transition()
 				.attr("fill", function() {
 					return scaleToColor(Math.random());	
+				})
+				.attr("y", function(d) {
+					return h - yScale(d.value);
+				})
+				.attr("height", function(d) {
+					return yScale(d.value);
 				});
 		});
 	}

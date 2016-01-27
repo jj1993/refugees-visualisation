@@ -1,0 +1,71 @@
+Note: The Bootstrap library and Modernizr.js are available under the MIT license (see below)
+
+======================
+DATA DRIVEN DOCUMENTS
+======================
+
+F. Copyright and Content Ownership
+
+We claim no intellectual property rights over the material you provide to the Service. Your profile and materials uploaded remain yours. However, by setting your pages to be viewed publicly, you agree to allow others to view your Content. By setting your repositories to be viewed publicly, you agree to allow others to view and fork your repositories.
+
+GitHub does not pre-screen Content, but GitHub and its designee have the right (but not the obligation) in their sole discretion to refuse or remove any Content that is available via the Service.
+
+You shall defend GitHub against any claim, demand, suit or proceeding made or brought against GitHub by a third-party alleging that Your Content, or Your use of the Service in violation of this Agreement, infringes or misappropriates the intellectual property rights of a third-party or violates applicable law, and shall indemnify GitHub for any damages finally awarded against, and for reasonable attorney’s fees incurred by, GitHub in connection with any such claim, demand, suit or proceeding; provided, that GitHub (a) promptly gives You written notice of the claim, demand, suit or proceeding; (b) gives You sole control of the defense and settlement of the claim, demand, suit or proceeding (provided that You may not settle any claim, demand, suit or proceeding unless the settlement unconditionally releases GitHub of all liability); and (c) provides to You all reasonable assistance, at Your expense.
+
+The look and feel of the Service is copyright ©2010 GitHub Inc. All rights reserved. You may not duplicate, copy, or reuse any portion of the HTML/CSS, Javascript, or visual design elements or concepts without express written permission from GitHub.
+
+======================
+	Queue.js
+======================
+
+// Copyright 2006 The Closure Library Authors. All Rights Reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS-IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+========================
+	MIT LICENSE
+========================
+
+The MIT License (MIT)
+
+Copyright (c) 2011-2016 Twitter, Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+
+==============================
+	Blue App Template
+==============================
+
+Free License Terms
+You may download free templates from Shapebootstrap.net and use them in any personal or business project without any charge. Keeping the developer credits on the footer is appreciated but not mandatory.
+You may not offer those templates, modified or unmodified, for redistribution or resale. You cannot include the template with a website offered for sale or distributed for free.
+You may be permitted to convert a template to a CMS theme to sell or distribute for free, but the copyright holder's permission (preferably written) is required.
+We don’t provide any support for the items displayed on Shapebootstrap.net. Please contact with the respective template author for rearranged license terms and supports if required.
+

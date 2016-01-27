@@ -68,7 +68,7 @@ Description: Personal style edits
 	right: 20px;
 }
 
-.graph text {
+.graph .axis text {
     -moz-text-decoration-color: black; /* Code for Firefox */
     text-decoration-color: black;
     font-size: 10px;
@@ -80,9 +80,7 @@ Description: Personal style edits
 	position: absolute;
 	left: 30px;
 	top: 5px;
-}	
-
-
+}
 
 .graph path {
     stroke-width: 2px;
@@ -93,7 +91,6 @@ Description: Personal style edits
     fill: none;
     stroke: black;
     stroke-width: 1.5px;
-    shape-rendering: crispEdges;
 }
 
 
@@ -112,9 +109,15 @@ Description: Personal style edits
 
 .graph #extGraphName {
 	font-size: 25px;
+	font-weight: bold;
 	position: absolute;
-	left: 300px;
 	top: 0px;
+}
+
+.graph .extChardTitle {
+	font-size: 16px;
+	position: absolute;
+	top: 28px;
 }	
 
 .graph .extrank {
@@ -138,6 +141,10 @@ Description: Personal style edits
   fill: none;
 }
 
+.graph .labels text {
+	font-size: 12px;
+}
+
 .graph #legrow svg {
 	padding-top: 8px;
 }
@@ -150,7 +157,13 @@ Description: Personal style edits
 svg .bartext {
 
 	pointer-events: none;
-	text-shadow: 1px 1px black;
+	color: black;
+	text-shadow: 1px 1px white;
+}
+
+svg .baraxis {
+	stroke: black;
+	stroke-width: 1px;
 }
 
 

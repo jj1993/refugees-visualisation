@@ -43,7 +43,6 @@ function update(n) {
 
 	drawMap();
 	updateLegenda();
-	drawRanks();
 }
 
 function updateLegenda() {
@@ -57,7 +56,7 @@ function updateLegenda() {
 		"km2rank": "Worldrank"
 	}
 	var values = d3.extent(countryData, function(d){
-		try{return d[dateKey][1][type]}
+		try{return Math.log(d[dateKey][1][type])}
 		catch (err) {return};
 		});
 	values.splice(1, 0, values[0]+values[1]/2.0);

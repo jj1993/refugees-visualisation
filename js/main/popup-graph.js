@@ -59,7 +59,7 @@ function drawInfo(d, pos) {
 		.attr("type", "button")
 		.attr("class", "btn btn-info")
 		.attr("id", "extgraph")
-		.text("Meer informatie")
+		.text("Extend information")
 		.on("click", function() {extendInfo(d)});
 
 }
@@ -74,8 +74,23 @@ function extendInfo(d) {
 	$(".graph").empty()
 
 	graph.append("text")
-		.text("Extended data on refugees in "+d[dateKey][3])
-		.attr("id", "extGraphName");
+		.text(d[dateKey][3])
+		.attr("text-anchor", "middle")
+		.attr("id", "extGraphName")
+		.style("left", screen.width*0.35+'px');
+
+	graph.append("text")
+		.text("Total refugees per year by origin")
+		.attr("text-anchor", "middle")
+		.attr("class", "extChardTitle")
+		.style("left", screen.width*0.1+'px');
+
+	graph.append("text")
+		.text("Fraction of refugees by origin in selected year")
+		.attr("text-anchor", "middle")
+		.attr("class", "extChardTitle")
+		.style("left", screen.width*0.45+'px');
+
 
 	graph
 		.style("width", width)

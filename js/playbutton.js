@@ -7,6 +7,7 @@
 var buttonState = 'stop';
 
 function buttonPlayPress() {
+    // The play button is initiated
     if (buttonState=='stop') {
         // starting time
         buttonState = 'play';

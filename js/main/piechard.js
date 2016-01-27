@@ -1,6 +1,12 @@
+// =====================================================
+// The piechard will appear when a user extends the 
+// popup-graph. The piechard is drawn and updates itself
+// on mouse-slider events
+// =====================================================
+
 function drawPie(data, svg, dim) {
-
-
+	// The pie chard is initiated with its parent-svg
+	// Code for labeled pie-chard from http://bl.ocks.org/dbuezas/9306799
 	var g = svg.append("g")
 				.attr("id", "piegraph")
 
@@ -38,9 +44,13 @@ function drawPie(data, svg, dim) {
 		keys.push(data[dateKey][2][i][2])
 	}
 
-	var color = d3.scale.ordinal().range(["#7fc97f","#beaed4", "#fdc086", "#ffff99", "#386cb0"]);
+	var color = d3.scale.ordinal().range(
+		["#7fc97f","#beaed4", "#fdc086", "#ffff99", "#386cb0"]
+		);
 
 	function pieData (){
+		// The data is reformatted so the pie-chard template doesn't
+		// have to be changed
 		r = [];
 		for (var i=0; i<data[dateKey][2].length; i++) {
 			var label = data[dateKey][2][i][2];
@@ -83,8 +93,7 @@ function drawPie(data, svg, dim) {
 	});
 
 	function change(data) {
-
-		/* ------- PIE SLICES -------*/
+		// Pie slices
 		var slice = svg.select(".slices").selectAll("path.slice")
 			.data(pie(data), key);
 
@@ -107,8 +116,7 @@ function drawPie(data, svg, dim) {
 		slice.exit()
 			.remove();
 
-		/* ------- TEXT LABELS -------*/
-
+		// Text labels
 		var text = svg.select(".labels").selectAll("text")
 			.data(pie(data), key);
 
@@ -118,7 +126,7 @@ function drawPie(data, svg, dim) {
 			.text(function(d) {
 				return d.data.label;
 			});
-		
+
 		function midAngle(d){
 			return d.startAngle + (d.endAngle - d.startAngle)/2;
 		}
@@ -148,10 +156,11 @@ function drawPie(data, svg, dim) {
 		text.exit()
 			.remove();
 
-		/* ------- SLICE TO TEXT POLYLINES -------*/
+		// Slice-to-text polylines
 		$(".slices text").remove()
 		svg.select(".slices").append("text")
 							.text(currentDate.getFullYear())
+							.attr("style", "text-anchor: middle")
 
 		var polyline = svg.select(".lines").selectAll("polyline")
 			.data(pie(data), key);

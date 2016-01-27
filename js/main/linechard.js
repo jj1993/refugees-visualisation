@@ -51,16 +51,12 @@ function drawGraph(data, svg, dim, e) {
 					    	.attr("x", '50px')
 					    	.attr("y", '15px')
 					    	.attr("class", "legend")
+					    	.attr("style", "font-size: 10px")
 					    	.text(c.name);
 					    svg.append("path")
 					    	.attr("class", "legend")
 					    	.attr("d", valueline(c.values))
 					    	.attr('stroke', 'yellow')
-					    svg.selectAll(".labels text").each(function(d) {
-					    	if (d.data.label == c.name) {
-					    		$(this).css("color", "red");
-					    	}
-					    })
 			        });
 
 

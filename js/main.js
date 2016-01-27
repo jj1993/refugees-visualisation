@@ -206,7 +206,10 @@ function initiateMap(error, data){
  		.on("click", function(d) {
 	 		var pos = d3.mouse(this); 
 	 		$(".graph").remove();
-	 		$(this).attr("style", "stroke-width: 3px");
+	 		$(".country").css("stroke-width", "1px")
+	 		$(".country").css("stroke","black");
+	 		$(this).css("stroke-width","3px");
+	 		$(this).css("stroke","red");
 	 		if (SHOWFLOWS) {drawLines(d, pos);}
 	 		if (SHOWGRAPH) {drawInfo(d, pos);}
  		})
