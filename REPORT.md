@@ -26,7 +26,7 @@ Het doel van de visualisatie is om de gebruiker inzicht te geven in de ingewikke
 
 #### Het tab-blad met de wereldkaart
 
-* Bestaat uit de bestanden *
+*Bestaat uit de bestanden*
 
 * main.js
 De global variables worden gedefinieerd, de wereldkaart wordt geinitialiseerd en de legenda wordt ingetekend
@@ -43,7 +43,7 @@ Functies die nieuw DIV-object aanmaken en invullen met tekstelementen en een svg
 	* piechard.js, het taartdiagram zelf
 	* linechard.js, de lijndiagrammen van het kleine en grote popup-scherm
 
-* De technische werking *
+*De technische werking*
 
 * Op window.onload wordt een queue.awaitAll() functie aangeroepen waarbij eerst alle json's worden ingeladen. 
 Deze data wordt doorgestuurd naar een functie drawMap() als alles ingeladen is.
@@ -76,16 +76,26 @@ zichtbaar bij een click-event.
 getekend (drawPopup(totaal asielaanvragen *lijst*, herkomst asielzoekers *lijst van lijsten*)) en onzichtbaar gemaakt. 
 De popup wordt zichtbaar bij het zelfde event als de vluchtelingenstromen.
 
-Event: mouse klik op een land
+
+
+#### Het tab-blad met de bar-grafiek.
+
+Technische werking, functies en dom elementen
+
+
+#### Events
+Mouse klik op een land
 * De vluchtelingenstromen en pop up worden zichtbaargemaakt. Alle andere stromen en popups worden onzichtbaar gemaakt.
 * Het geselecteerde land wordt rood-omrand
 
-Event: slider-bar die het jaar aangeeft wordt verschoven
+Slider-bar die het jaar aangeeft wordt verschoven
 * De kleuren (fill) van de path-elementen wordt geupdate
 * De inhoud van de tekst-elementen met het totale aantal asielzoekers wordt geupdate
 * Alle zichtbare popups, tekstvakken, en asielstromen worden onzichtbaar gemaakt tot het volgende hover-event
 
-#### Het tab-blad met de bar-grafiek
+Een andere selector wordt geselecteerd in de menu-balk
+* actie 1
+
 
 ### 3. Changes with respect to DESIGN-document
 
