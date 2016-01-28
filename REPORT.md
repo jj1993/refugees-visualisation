@@ -31,6 +31,7 @@ Het doel van de visualisatie is om de gebruiker inzicht te geven in de ingewikke
 De global variables worden hier gedefinieerd, de wereldkaart wordt geinitialiseerd en de legenda wordt ingetekend. Ook zijn er enkele regels jQuery gebruikt om de events van de checkboxes en slider-bar aan hun functie te koppelen.
 
 De initialisatie:
+
 	Op window.onload wordt een queue.awaitAll() functie aangeroepen waarbij eerst alle json's worden ingeladen. 
 	Deze data wordt doorgestuurd naar een functie drawMap() als alles ingeladen is. In drawMap() laat ik ook 
 	alle visualisaties en grafieken getekent worden. Mogelijk kan ik in drawMap() zelf een queue implementeren 
