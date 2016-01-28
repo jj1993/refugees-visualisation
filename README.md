@@ -7,15 +7,18 @@ In deze repository staat de visualisatie "Refugees in Europe". Het is een visual
 
 ### 1. Gebruikersfuncties
 
-De visualisatie geeft een landkaart weer die is gefocust op Europa (het continent) en de omliggende landen. In elk land wordt weergegeven hoeveel vluchtelingen en personen in vluchteling-achtige omstandigheden er in dat land aanwezig zijn.
+De visualisatie bestaat uit twee tab-bladen. In het eerste tab-blad geeft de webpagina een landkaart weer die is gefocust op Europa (het continent) en de omliggende landen. In elk land wordt weergegeven hoeveel vluchtelingen en personen in vluchteling-achtige omstandigheden er in dat land aanwezig zijn.
 
 De kleur van elk land geeft aan welk deel (percentage) van de bevolking vluchteling is. Als de gebruiker een land aanklikt wordt er een lijngrafiek weergegeven waarop de ontwikkeling van de totale vluchtelingen populatie vanaf 2010 weergegeven wordt. Ook worden er lijnen getrokken tussen het geselecteerde land en de landan waarvanuit de belangrijkste vluchtelingenstromen NAAR het geselecteerde land komen. De dikte van deze lijnen is kwadratisch geschaald naar het aantal vluchtelingen dat deze route gebruikt. Bij de lijngrafiek krijgt de gebruiker de keuze om de grafiek uit te breiden. Hierbij wordt het grootste deel van het scherm ingekomen door een popup scherm met de volgende functies:
 * Een lijndiagram waarop de grootte van de vluchtelingenstromen vanuit verschillende landen NAAR het aangeklikte land aangegeven worden van 2010 tot 2015.
 * Een taartdiagram waarin het proportionele aandeel van alle vluchtelingenstromen in het geselecteerde land weergegeven worden
+	* De kleuren van de lijnen en 'slices' van het taartdiagram voor eenzelfde land zijn gelijk, voor meer gebruikersgemak
 * Het aantal vluchtelingen per 1000 inwoners, per GDP en per 1000 km2 in het geselecteerde land
 * Een 'rang' die het land inneemt ten opzichten van alle andere bij de VN-aangesloten landen in het geselecteerde jaar, op basis van deze drie getallen, waarbij de rang 1 betekent dat het land het 'hoogste' getal heeft (bijvoorbeeld Libanon heeft de meeste vluchtelingen per inwoner in 2015, en neemt in dat jaar voor dat datatype de rang 1 aan).
 
 Als de gebruiker de muis over een land beweegt verschijnt de naam. In de menubalk kan er gewisseld worden tussen drie kleurenwaardes: het aantal vluchtelingen per 1000 inwoners, per GDP en per 1000km2. Voor meer gebruikersgemak worden deze drie variabelen in verschillende kleurencoderingen weergegeven na geselecteerd te zijn. De gebruiker kan doormiddel van het verschuiven van een slider de datum aanpassen. Ook kan er door middel van een play/stop-button gekozen worden om de tijd constant te laten afspelen.
+
+In het tweede tab-blad wordt een interactieve bar-grafiek weergegeven. De gebruiker ziet bij het initialiseren van de grafiek de 15 hoogst scorende landen in 2010 op de selector "vluchtelingen per 1000 inwoners". De gebruiker kan wisselen naar de selectors "vluchtelingen per GDP" en "vluchtelingen per 1000km2". Hierbij veranderd de kleurencodering naar de zelfde waardes als die van de wereldkaart bij deze selectors. De datum kan op dezelfde manier als bij de wereldkaart gewijzigt worden: door middel van het handmatig hanteren van de slider, of het gebruiken van de stop/play-button. Op elk moment (ook tijdens het wijzigen van de tijd door middel van de stop/play-button) kan de data opnieuw gesorteerd worden, waarbij de 15 landen die op dat moment het hoogste scoren op de selector weergegeven worden.
 
 Het doel van de visualisatie is om de gebruiker inzicht te geven in de ingewikkelde migratiepatronen die naar Europa plaatsvinden. Zo hebben vluchtelingen uit verschillende landen mogelijk ook een voorkeur voor andere landen. Daarnaast moet de visualisatie inzicht geven in de relatieve verschuiving van deze pattronen (mogelijk reisden Eritreërs eerst liever naar Duitsland, maar nu liever naar Zweden). Ten slotte, en het meest belangrijk, moet de visualisatie de gebruiker inzicht geven in hoe grote gebeurtenissen de migratiestromen hebben beinvloed.
 
@@ -24,7 +27,7 @@ Het doel van de visualisatie is om de gebruiker inzicht te geven in de ingewikke
 ![](doc/scr1.JPG)
 ![](doc/scr2.JPG)
 ![](doc/scr3.JPG)
-![](doc/scr4.JGP)
+![](doc/scr4.JPG)
 ![](doc/scr5.JPG)
 
 ### 3. Copyright statement

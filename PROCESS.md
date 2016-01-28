@@ -111,3 +111,7 @@ Namen van functies en variabelen verduidelijkt. Een paar kleine bugs verholpen. 
 #Dag 17, 26 januari
 
 Verder gegaan met opschonen en verduidelijken van code. Bronvermelding op website beschikbaar gemaakt. Knop toegevoegd waarmee de tijd afgespeeld kan worden. Laadscherm ingevoegd.
+
+#Dag 18, 27 januari
+
+Alle code is opgeschoond. Alles lijkt goed te werken. Laatste kleine bugs en stijlverbeteringen doorgevoerd. Uitgebreid begin gemaakt met de final report. Readme is geupdate. LICENSE-file is aangemaakt.
