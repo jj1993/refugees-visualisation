@@ -43,25 +43,3 @@ function drawLines(d, pos) {
 		highlight[d[0]] = n;
 	}
 }
-
-function highLight(c) {
-	// The flow-lines are highlighted on mouseovers
-	try {
-		if (c in highlight) {
-			var n = highlight[c];
-			$("#line"+n).attr("stroke",color);
-		}
-	}
-	catch (err) {}
-}
-
-function lowLight(c) {
-	// On a mouseout, the lines will return to original color
-	try {
-		if(c in highlight) {
-			var n = highlight[c];
-			$("#line"+n).attr("stroke",origC);
-		}
-	}
-	catch (err) {}
-}

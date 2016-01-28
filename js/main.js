@@ -277,7 +277,7 @@ function legenda() {
 	scaleToFlow = d3.scale.linear().domain(
 		[0, Math.sqrt(200000)]).range([0, 10]
 		);
-	values = [50000, 250000, 800000];
+	var values = [50000, 250000, 800000];
 	updateLegenda();
 	for (var i=0; i<3; i++) {
 		$("#legvalue"+(i+3)).empty().append("<p>"+values[i]+"</p>");
