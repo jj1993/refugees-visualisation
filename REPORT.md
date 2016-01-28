@@ -91,6 +91,7 @@ drawLines(), tekent de migratie lijnen voor het geselecteerde land. Voegt hover-
 * popup-graph.js
 
 Functies die nieuw DIV-object aanmaken en invullen met tekstelementen en een svg-object dat ingedeeld wordt. Zowel het kleine (drawInfo()) als grote popupscherm (drawExtendInfo())	worden hier bijgehouden. In het popup scherm worden in de uitgebreide-modus een taartdiagram (zie piechard.js) en een lijndiagram (zie linechard.js) weergegeven. Ook worden de selector-waardes weergegeven met hun respectievelijke worldrank (drawRank()). Er zijn geen returns in dit bestand.
+
 	* piechard.js, het taartdiagram zelf, d3 template waarbij ik mijn data in de vorm van de template heb gezet. Zie sources in README.md voor de bron.
 	* linechard.js, de lijndiagrammen van het kleine en grote popup-scherm, d3 template waarbij ik mijn data in de vorm van de template heb gezet. Zie sources in README.md voor de bron.
 
@@ -106,6 +107,7 @@ Functies die nieuw DIV-object aanmaken en invullen met tekstelementen en een svg
 
 
 **Events**
+
 *Hover over land*
 De landnaam wordt weergegeven, op een positie relatief ten opzichten van de muis
 De kleur van het land wordt wit
@@ -130,6 +132,7 @@ Als de slider bar het volgende data punt bereikt, wordt de data geupdate
 De bar grafiek wordt in een andere HTML-file weergegeven dan de wereldkaart.
 
 **Werking**
+
 Met een aantal jQuery codes worden de events aan de slider en buttons in de HTML gekoppeld. 
 
 Met en queue.js wordt de colorValue.json data ingeladen. Dit is de data die bij de selectors hoort.
@@ -149,6 +152,7 @@ Verder zijn de functies defineColorScale(), update() en selectDateKey() ingevoeg
 * STARTDATE, de begindatum. Eerste element van YEARS bij default.
 
 **Events**
+
 *Slider-bar die het jaar aangeeft wordt verschoven*
 De dateKey wordt geupdate, en de update() functie wordt aangeroepen. De grootte van de bars wordt bijgewerkt. Note: dit is dus niet de update functie van de wereldkaart!
 
@@ -162,11 +166,11 @@ Als de slider bar het volgende data punt bereikt, wordt de data geupdate.
 
 ### 4. Changes with respect to DESIGN-document
 
-De belangrijkste verandering is het tweede tab-blad: in het originele plan was er slechts één pagina.
+De belangrijkste verandering is het tweede tab-blad: in het originele plan was er slechts één pagina. Deze pagina is toegevoegt om nog een andere visualisatie van de data mogelijk te maken. Het viel mij in het proces op dat de wereldkaart erg weinig inzicht gaf in de landen relatief ten opzichten van elkaar, vooral aangezien de kaart op Europa gecentreerd was. Met de bar grafiek is relatieve positie van landen duidelijk zichtbaar. 
 
-Er is een knop ingevoegd waarmee de tijd automatisch verloopt
+Er is een knop ingevoegd waarmee de tijd automatisch verloopt. Hierdoor kan de gebuiker landen in verschillende periodes vergelijken, als ook hun ontwikkeling, zonder telkens heen en weer te hoeven klikken en scrollen. Ik vond ik zelf meteen fijner werken.
 
-Bij een klik op een land komt er eerst een simpele lijngrafiek met alleen een totaal omhoog. Bij het klikken op een extentie-button worden pas de lijngrafiek en taartgrafiek zoals bedoeld in het design-document weergegeven. In het uitgeklapte scherm wordt nu ook de score van het land in het geselecteerde jaar op de drie selectors met hun rang gegeven.
+Bij een klik op een land komt er eerst een simpele lijngrafiek met alleen een totaal omhoog. Bij het klikken op een extentie-button worden pas de lijngrafiek en taartgrafiek zoals bedoeld in het design-document weergegeven. In het uitgeklapte scherm wordt nu ook de score van het land in het geselecteerde jaar op de drie selectors met hun rang gegeven. In het originele plan zou het scherm meteen erg vol worden als een land wordt aangeklikt en er een popup omhoog komt, of deze popup zou zo klein moeten zijn dat het niet meer leesbaar is. Bovendien kon het uitgeklapte popup scherm nu groter zijn, zonder storend te zijn, en is er ook nog exacte data van de selectors toegevoegt. Hiermee wordt er een meer compleet beeld van elk land gegeven.
 
 **Kleine veranderingen**
 
@@ -181,14 +185,23 @@ Al deze veranderingen zijn doorgevoerd op basis van advies bij de daily-standups
 
 
 ### 5. Challenges and decisions
+Hier worden mijn belangrijkste uitdagingen beschreven
 
-* Namen van landen in dataset
+**Namen van landen in dataset**
+
 De namen waren niet consistent opgemaakt, waardoor Python (waarmee de data omgezet werd in JSON's) niet herkende dat het om dezelfde landen ging. Ook was het linken van de landen aan hun ISO-codes een probleem. Dit probleem is deels opgelost door een land/ISO-code vertaalsleutel van de VN zelf te gebruiken. Hierbij kwam de opmaak grotendeels overeen. De rest van de conflicten zijn 'met de hand' opgelost.
-* Python's SimpleHTTPServer
-Gooit cache niet weg
-* Centroids van landen
-Niet in dataset. Lastig te vinden
-* Het cijfer van het totale aantal vluchtelingen per land
-Dit cijfer wordt niet meer weergegeven in de landen maar alleen in de lijngrafiek bij het klikken op een land. De wereldkaart werd te druk (onoverzichtelijk!) van alle cijfers en de cijfers werden op de verkeerde plek geplaatst omdat de centroids van de landen onbekend zijn.
-* y-as van de bar-grafiek
-Verstoort de plaatsing van andere text-objecten
+
+**Python's SimpleHTTPServer**
+
+Aangezien ik mijn databestanden lokaal inlaadde en moderne webbrowsers hier een beveiliging tegen hebben, moest ik mijn index.html via een server laden. Hierbij heb ik gekozen voor Python's SimpleHTTPServer implementatie. Lader liep ik echter tegen een dataprobleem aan, als ik de fouten uit mijn data-files haalden bleek de server de oude data bestanden alsnog in te laden. Dit omdat Pythons server de cache van deze data bewaard. Ook als de laptop opnieuw opgestart wordt(!). Uiteindelijk heb ik het probleem opgelost door de incognito-modus van Google Chrome te gebruiken, die de server dwingt om een nieuwe cache op te halen.
+
+**Centroids van landen**
+
+In de gebruikte GeoJSON dataset waren alleen de landcodes aan de landen meegegeven als data. De centroids van de landen waren niet beschikbaar, waardoor ik geen manier heb ik het programma te vertellen waar op de kaart een land zich bevind. Dit wou ik in de eerste plaats oplossen door de muis-positie te gebruiken: als er op een land geklikt wordt, wordt de locatie van de muis doorgegeven voor het popup-scherm. Hiermee is het probleem echter niet opgelost voor de migratie lijnen, die moeten lopen van het geselecteerde land naar landen in de dataset. De centroids van deze landen heb ik geprobeerd te benaderen door het gemiddelde van de BBOX te nemen: de uiterste x/y-coordinaten van de landen. Dit werkt echter erg slecht voor landen zoals Rusland, die voor een deel van de rechter kant van de kaart doorlopen naar de linker kant van de kaart. Op dit laatste probleem heb ik geen goede oplossing kunnen vinden. Als ik meer tijd had gehad, zou ik overgestapt zijn op datamaps.
+
+**Het cijfer van het totale aantal vluchtelingen per land**
+
+Dit cijfer wordt niet meer weergegeven in de landen maar alleen in de lijngrafiek bij het klikken op een land. De wereldkaart werd te druk (onoverzichtelijk!) van alle cijfers en de cijfers werden op de verkeerde plek geplaatst omdat de centroids van de landen onbekend zijn. Het niet meer weergeven van deze cijfers in de landen zelf werd positief ontvangen bij feedback rondes van andere studenten.
+
+**De missende y-as van de bar-grafiek**
+Door een onverklaarde bug in de code, worden de text-objecten van de d3.axis.call() inplementatie niet aan de as gekoppeld. Bovendien werden de andere text-objecten in de bar-grafiek, die met de landnamen, juist aan de as gekoppeld. Zelfs wanneer ik alle classe- en id-namen veranderden en beide types text-objecten in andere g-objecten zetten bleef dit probleem bestaan. Vanwege tijdgebrek heb ik er voor gekozen om deze as dus weg te laten uit de visualisatie.
