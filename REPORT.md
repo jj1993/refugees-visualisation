@@ -92,8 +92,8 @@ drawLines(), tekent de migratie lijnen voor het geselecteerde land. Voegt hover-
 
 Functies die nieuw DIV-object aanmaken en invullen met tekstelementen en een svg-object dat ingedeeld wordt. Zowel het kleine (drawInfo()) als grote popupscherm (drawExtendInfo())	worden hier bijgehouden. In het popup scherm worden in de uitgebreide-modus een taartdiagram (zie piechard.js) en een lijndiagram (zie linechard.js) weergegeven. Ook worden de selector-waardes weergegeven met hun respectievelijke worldrank (drawRank()). Er zijn geen returns in dit bestand.
 
-	* piechard.js, het taartdiagram zelf, d3 template waarbij ik mijn data in de vorm van de template heb gezet. Zie sources in README.md voor de bron.
-	* linechard.js, de lijndiagrammen van het kleine en grote popup-scherm, d3 template waarbij ik mijn data in de vorm van de template heb gezet. Zie sources in README.md voor de bron.
+*piechard.js*, het taartdiagram zelf, d3 template waarbij ik mijn data in de vorm van de template heb gezet. Zie sources in README.md voor de bron.
+*linechard.js*, de lijndiagrammen van het kleine en grote popup-scherm, d3 template waarbij ik mijn data in de vorm van de template heb gezet. Zie sources in README.md voor de bron.
 
 **Globale variabelen**
 * currentDate, de huidige datum, zoals weergegeven door de slider
@@ -108,22 +108,22 @@ Functies die nieuw DIV-object aanmaken en invullen met tekstelementen en een svg
 
 **Events**
 
-*Hover over land*
+*Hover over land.*
 De landnaam wordt weergegeven, op een positie relatief ten opzichten van de muis
 De kleur van het land wordt wit
 
-*Mouse klik op een land*
+*Mouse klik op een land.*
 De vluchtelingenstromen en pop up worden zichtbaargemaakt. Alle andere stromen en popups worden onzichtbaar gemaakt. Zie popup-graph.js
 Het geselecteerde land wordt rood-omrand
 
-*Slider-bar die het jaar aangeeft wordt verschoven*
+*Slider-bar die het jaar aangeeft wordt verschoven.*
 De kleuren (fill) van de path-elementen wordt geupdate
 Alle zichtbare popups, tekstvakken, en asielstromen worden onzichtbaar gemaakt tot het volgende hover-event
 
-*Een andere selector wordt geselecteerd in de menu-balk*
+*Een andere selector wordt geselecteerd in de menu-balk.*
 De globale variabele die de gebruikte selector aangeeft, *type*, wordt geupdate. De kleuren van de landen worden bijgewerkt. Bij een klik event wordt nu automatisch de correcte data weergegeven.
 
-*De play-button wordt ingedrukt*
+*De play-button wordt ingedrukt.*
 De slider bar wordt landzaam en constant bewogen
 Als de slider bar het volgende data punt bereikt, wordt de data geupdate
 
@@ -153,13 +153,13 @@ Verder zijn de functies defineColorScale(), update() en selectDateKey() ingevoeg
 
 **Events**
 
-*Slider-bar die het jaar aangeeft wordt verschoven*
+*Slider-bar die het jaar aangeeft wordt verschoven.*
 De dateKey wordt geupdate, en de update() functie wordt aangeroepen. De grootte van de bars wordt bijgewerkt. Note: dit is dus niet de update functie van de wereldkaart!
 
-*Een andere selector wordt geselecteerd in de menu-balk*
+*Een andere selector wordt geselecteerd in de menu-balk.*
 De globale variabele die de gebruikte selector aangeeft, *type*, wordt geupdate. De kleuren van de bars worden bijgewerkt. Bij een klik event wordt nu automatisch de correcte data weergegeven.
 
-*De play-button wordt ingedrukt*
+*De play-button wordt ingedrukt.*
 De slider bar wordt landzaam en constant bewogen
 Als de slider bar het volgende data punt bereikt, wordt de data geupdate.
 
@@ -204,4 +204,5 @@ In de gebruikte GeoJSON dataset waren alleen de landcodes aan de landen meegegev
 Dit cijfer wordt niet meer weergegeven in de landen maar alleen in de lijngrafiek bij het klikken op een land. De wereldkaart werd te druk (onoverzichtelijk!) van alle cijfers en de cijfers werden op de verkeerde plek geplaatst omdat de centroids van de landen onbekend zijn. Het niet meer weergeven van deze cijfers in de landen zelf werd positief ontvangen bij feedback rondes van andere studenten.
 
 **De missende y-as van de bar-grafiek**
+
 Door een onverklaarde bug in de code, worden de text-objecten van de d3.axis.call() inplementatie niet aan de as gekoppeld. Bovendien werden de andere text-objecten in de bar-grafiek, die met de landnamen, juist aan de as gekoppeld. Zelfs wanneer ik alle classe- en id-namen veranderden en beide types text-objecten in andere g-objecten zetten bleef dit probleem bestaan. Vanwege tijdgebrek heb ik er voor gekozen om deze as dus weg te laten uit de visualisatie.

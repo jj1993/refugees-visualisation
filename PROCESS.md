@@ -115,3 +115,11 @@ Verder gegaan met opschonen en verduidelijken van code. Bronvermelding op websit
 #Dag 18, 27 januari
 
 Alle code is opgeschoond. Alles lijkt goed te werken. Laatste kleine bugs en stijlverbeteringen doorgevoerd. Uitgebreid begin gemaakt met de final report. Readme is geupdate. LICENSE-file is aangemaakt.
+
+#Dag 19, FREE AT LAST
+
+De final report is afgerond. De text in de HTML-bestanden is geupdate. De README.md is in stijl geupdate. 
+
+
+**BEDANKT VOOR DE LEUKE MINOR!**
+
